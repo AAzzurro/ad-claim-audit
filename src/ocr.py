@@ -125,21 +125,47 @@ def parse_legacy_ocr(raw: Any, min_score: float) -> list[dict[str, Any]]:
 
 
 class PaddleOCREngine:
-    def __init__(self, lang: str = "ch", min_score: float = 0.5) -> None:
+    def __init__(
+        self,
+        lang: str = "ch",
+        min_score: float = 0.5,
+        models_dir: Path | None = None,
+        det_dir: Path | None = None,
+        rec_dir: Path | None = None,
+        ocr_size: str = "small",
+    ) -> None:
         from paddleocr import PaddleOCR
 
-        logger.info("加载 PaddleOCR（lang=%s）", lang)
+        from src.local_models import ensure_ocr_dirs, persist_paddlex_ocr
+
+        det, rec = ensure_ocr_dirs(models_dir, det_dir, rec_dir, size=ocr_size)
+        logger.info("加载 PaddleOCR（det=%s rec=%s）", det, rec)
         kwargs = {
-            "lang": lang,
             "use_doc_orientation_classify": False,
             "use_doc_unwarping": False,
             "use_textline_orientation": False,
+            "text_detection_model_name": det.name,
+            "text_detection_model_dir": str(det),
+            "text_recognition_model_name": rec.name,
+            "text_recognition_model_dir": str(rec),
         }
         try:
             self.ocr = PaddleOCR(**kwargs)
         except TypeError:
-            # 旧版 API
-            self.ocr = PaddleOCR(use_angle_cls=True, lang=lang, show_log=False)
+            # 旧版 API：det_model_dir / rec_model_dir
+            try:
+                self.ocr = PaddleOCR(
+                    use_angle_cls=True,
+                    lang=lang,
+                    show_log=False,
+                    det_model_dir=str(det),
+                    rec_model_dir=str(rec),
+                )
+            except TypeError:
+                from src.config import MODELS_DIR
+
+                self.ocr = PaddleOCR(use_angle_cls=True, lang=lang, show_log=False)
+                persist_paddlex_ocr(models_dir or MODELS_DIR, size=ocr_size)
         self.min_score = min_score
         self._use_predict = hasattr(self.ocr, "predict")
 
