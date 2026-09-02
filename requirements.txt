@@ -1,0 +1,12 @@
+# ASR / OCR 抽取流水线
+# paddlepaddle 需单独从官方源安装，见 setup_env.sh
+
+numpy>=1.24,<2.3
+opencv-python-headless>=4.8
+imageio-ffmpeg>=0.5
+tqdm>=4.66
+pandas>=2.0
+openpyxl>=3.1
+faster-whisper>=1.1
+huggingface_hub>=0.23,<1
+paddleocr>=3.0

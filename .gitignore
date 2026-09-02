@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+.cache/
+huggingface/
+models/
+
+# 运行产物（视频原文件体积大，默认不入库）
+videos/*
+!videos/.gitkeep
+data/audio/
+data/frames/
+data/asr/
+data/ocr/
+data/merged/
+data/*.jsonl
+data/*.json
+
+# 模型与临时文件
+*.wav
+*.pt
+*.onnx
+.tmp/
