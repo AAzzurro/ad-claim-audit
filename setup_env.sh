@@ -33,6 +33,9 @@ python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/pac
 echo "安装 PaddleOCR"
 python -m pip install -i "$PIP_INDEX" "paddleocr>=3.0"
 
+echo "安装审核台（FastAPI）"
+python -m pip install -i "$PIP_INDEX" "fastapi>=0.115" "uvicorn>=0.30" "python-multipart>=0.0.9"
+
 echo "写入 requirements-lock.txt"
 python -m pip freeze > requirements-lock.txt
 
@@ -42,4 +45,5 @@ python -m src.check_env
 echo
 echo "完成。之后运行："
 echo "  source .venv/bin/activate"
-echo "  python -m src.pipeline --only 1,10 --force   # 用本地新模型重跑两条样本"
+echo "  python -m src.app                          # 打开审言审核台 http://127.0.0.1:7860"
+echo "  python -m src.pipeline --only 1,10 --force  # 用本地新模型重跑两条样本"

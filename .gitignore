@@ -19,6 +19,10 @@ data/asr/
 data/ocr/
 data/merged/
 data/compare/
+data/detect/
+data/classify/
+data/eval/
+data/uploads/
 data/*.jsonl
 data/*.json
 

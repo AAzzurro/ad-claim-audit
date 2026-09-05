@@ -66,6 +66,14 @@ class Settings:
     def merged_dir(self) -> Path:
         return self.data_dir / "merged"
 
+    @property
+    def detect_dir(self) -> Path:
+        return self.data_dir / "detect"
+
+    @property
+    def classify_dir(self) -> Path:
+        return self.data_dir / "classify"
+
     def ensure_dirs(self) -> None:
         for path in (
             self.data_dir,
@@ -73,6 +81,8 @@ class Settings:
             self.asr_dir,
             self.ocr_dir,
             self.merged_dir,
+            self.detect_dir,
+            self.classify_dir,
             self.models_dir,
         ):
             path.mkdir(parents=True, exist_ok=True)

@@ -12,7 +12,8 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 _DURATION_RE = re.compile(r"Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)")
-_VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".avi", ".webm", ".MP4", ".MOV"}
+VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".avi", ".webm", ".MP4", ".MOV"}
+_VIDEO_EXTS = VIDEO_EXTS
 
 
 def find_ffmpeg() -> str:

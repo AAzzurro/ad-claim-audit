@@ -12,5 +12,8 @@ paddleocr>=3.0
 funasr>=1.2
 torch
 torchaudio
+fastapi>=0.115
+uvicorn>=0.30
+python-multipart>=0.0.9
 # 可选：python -m src.pipeline --asr-backend whisper
 # faster-whisper>=1.1

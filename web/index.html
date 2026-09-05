@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>审言 · 短视频虚假宣传检测</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,700;1,9..144,600&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="top">
+      <div class="brand">
+        <span class="seal">审</span>
+        <div>
+          <h1>审言</h1>
+          <p>短视频广告虚假宣传话术检测台</p>
+        </div>
+      </div>
+      <div class="top-meta">
+        <span class="pill" id="lib-pill">测试集 —</span>
+        <span class="pill" id="llm-pill">模型检测中</span>
+      </div>
+    </header>
+
+    <main class="desk">
+      <section class="col stage-col">
+        <div class="device-wrap">
+          <div class="device" id="device">
+            <div class="device-notch" aria-hidden="true"></div>
+            <div class="device-screen">
+              <video id="player" playsinline controls></video>
+              <div class="drop" id="drop">
+                <input id="file" type="file" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.mp4,.mov,.mkv,.webm" hidden />
+                <button type="button" class="drop-hit" id="pick-file">
+                  <span class="drop-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                      <rect x="10" y="8" width="28" height="32" rx="4" stroke="currentColor" stroke-width="1.6" />
+                      <path d="M10 32l8-8 6 6 6-8 8 10" stroke="currentColor" stroke-width="1.6" fill="none" />
+                      <circle cx="31" cy="16" r="2.2" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <strong>放入短视频</strong>
+                  <em>拖入或点击选择 · mp4 / mov</em>
+                </button>
+              </div>
+              <div class="scan" id="scan" hidden></div>
+            </div>
+            <div class="device-bar" aria-hidden="true"></div>
+          </div>
+          <div class="stage-caption">
+            <span id="video-name">尚未选择视频</span>
+            <span id="video-dur"></span>
+          </div>
+          <div class="stage-actions">
+            <button type="button" class="ghost-btn" id="replace-file">更换视频</button>
+            <button type="button" class="ghost-btn" id="open-library">从测试集选择</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="col panel-col">
+        <div class="panel-block">
+          <div class="kicker">分析模式</div>
+          <div class="modes" id="modes" role="radiogroup" aria-label="分析模式"></div>
+          <label class="force-row">
+            <input type="checkbox" id="force" />
+            强制重新抽取口播 / 画面（忽略缓存）
+          </label>
+        </div>
+
+        <div class="panel-block run-block">
+          <button type="button" class="run" id="run" disabled>
+            <span>开始审核</span>
+            <small id="run-hint">请先放入视频</small>
+          </button>
+          <ol class="steps" id="steps" hidden>
+            <li data-step="ingest">接收</li>
+            <li data-step="extract">抽取</li>
+            <li data-step="review">审核</li>
+            <li data-step="done">出具</li>
+          </ol>
+          <p class="live" id="live" hidden></p>
+        </div>
+
+        <div class="result" id="result" hidden>
+          <div class="verdict" id="verdict">
+            <div class="stamp" id="stamp"></div>
+            <div class="verdict-copy">
+              <p class="verdict-kicker" id="verdict-kicker"></p>
+              <h2 id="verdict-title"></h2>
+              <p class="explain" id="explain"></p>
+            </div>
+          </div>
+          <div class="chips" id="labels"></div>
+          <div class="engine-row" id="engines" hidden></div>
+          <div class="tabs" role="tablist">
+            <button type="button" class="tab is-on" data-tab="evidence">证据</button>
+            <button type="button" class="tab" data-tab="audio">口播</button>
+            <button type="button" class="tab" data-tab="visual">画面</button>
+            <button type="button" class="tab" data-tab="basis">依据</button>
+          </div>
+          <div class="tab-panel" id="panel-evidence"></div>
+          <div class="tab-panel" id="panel-audio" hidden></div>
+          <div class="tab-panel" id="panel-visual" hidden></div>
+          <div class="tab-panel" id="panel-basis" hidden></div>
+        </div>
+
+        <p class="error" id="error" hidden></p>
+      </section>
+    </main>
+
+    <aside class="drawer" id="drawer" hidden>
+      <div class="drawer-card">
+        <header>
+          <h2>测试集</h2>
+          <button type="button" class="icon-x" id="close-library" aria-label="关闭">×</button>
+        </header>
+        <input type="search" id="lib-search" placeholder="搜索编号，例如 10" />
+        <div class="lib-grid" id="lib-grid"></div>
+      </div>
+    </aside>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
