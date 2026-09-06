@@ -1,0 +1,45 @@
+{
+  "sample_id": "155",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "28天改善皮肤质量"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        9
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "28天改善皮肤质量",
+      "matched": "28天改善皮肤质量",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中明确提到28天改善皮肤质量，属于功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"28天改善皮肤质量\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言\"],\"explanation\":\"口播中明确提到28天改善皮肤质量，属于功效断言。\"}"
+}

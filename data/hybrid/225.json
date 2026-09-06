@@ -1,0 +1,224 @@
+{
+  "sample_id": "225",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…区别在于哪里？就是它的面料。它这一款啊给你做到了天花板的材质。外面的方面给大家做的全部是拍牛皮，里面给…",
+    "女鞋材质天花板，送给懂货的想要高货，",
+    "做到了天花板的材质",
+    "外面的帮面给大家做的全部是胎牛皮",
+    "超级舒服",
+    "透气性特别好",
+    "不会臭脚",
+    "防止冬天穿着脚冷冰脚"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        39,
+        42
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        36,
+        45
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        16
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        5,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        128
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        2,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        249,
+        254
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 多处绝对化描述和功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…区别在于哪里？就是它的面料。它这一款啊给你做到了天花板的材质。外面的方面给大家做的全部是拍牛皮，里面给…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        39,
+        42
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "女鞋材质天花板，送给懂货的想要高货，",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "做到了天花板的材质",
+      "matched": "做到了天花板的材质",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        36,
+        45
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "外面的帮面给大家做的全部是胎牛皮",
+      "matched": "外面的帮面给大家做的全部是胎牛皮",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        16
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "超级舒服",
+      "matched": "超级舒服",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        5,
+        9
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "透气性特别好",
+      "matched": "透气性特别好",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        128
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "不会臭脚",
+      "matched": "不会臭脚",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        2,
+        6
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防止冬天穿着脚冷冰脚",
+      "matched": "防止冬天穿着脚冷冰脚",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        249,
+        254
+      ],
+      "rule_basis": "《广告法》第九条「等」；任务书示例「天花板」「超级舒服」「透气性特别好」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 8,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

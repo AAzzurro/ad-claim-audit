@@ -1,0 +1,55 @@
+{
+  "sample_id": "136",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "长肌肉"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        17,
+        20
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中提到长肌肉，画面中出现行业天花板，且有最后几单的诱导消费提示。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "长肌肉",
+      "matched": "长肌肉",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        17,
+        20
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

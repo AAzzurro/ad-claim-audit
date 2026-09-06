@@ -1,0 +1,80 @@
+{
+  "sample_id": "162",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…析进一步产生了不同氨糖的区别。研究证实，盐酸氨糖治疗骨关节炎效应量仅0.06，几乎无效，而硫酸氨糖效…",
+    "可达0.44"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        42,
+        44
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+    "《广告法》第九条；任务书示例「最高级」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 画面中出现「可达0.44」，属于绝对化表述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…析进一步产生了不同氨糖的区别。研究证实，盐酸氨糖治疗骨关节炎效应量仅0.06，几乎无效，而硫酸氨糖效…",
+      "matched": "治疗",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        42,
+        44
+      ],
+      "rule_basis": "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "可达0.44",
+      "matched": "可达0.44",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「最高级」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

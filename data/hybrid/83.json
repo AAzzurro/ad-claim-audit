@@ -1,0 +1,80 @@
+{
+  "sample_id": "83",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "首创者",
+    "全球自研环六肽、首创者"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        2
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、十七条、十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 全球自研环六肽、首创者为绝对化表述；多送点、把价改一下为诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "首创者",
+      "matched": "首创",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        2
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球自研环六肽、首创者",
+      "matched": "全球自研环六肽、首创者",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "《广告法》第九条、十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

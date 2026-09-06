@@ -1,0 +1,57 @@
+{
+  "sample_id": "104",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "520送女友"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 全年最低价和最后几单构成诱导消费，520送女友构成其他线索。",
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "520送女友",
+      "matched": "520送女友",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        7
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

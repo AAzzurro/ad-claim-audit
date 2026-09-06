@@ -1,0 +1,79 @@
+{
+  "sample_id": "156",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "28天改善皮肤质量",
+    "8天改善皮肤质量"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        1,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「28天改善皮肤质量」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中明确提到28天和8天改善皮肤质量，属于绝对化描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "28天改善皮肤质量",
+      "matched": "28天改善皮肤质量",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "8天改善皮肤质量",
+      "matched": "8天改善皮肤质量",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        1,
+        9
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

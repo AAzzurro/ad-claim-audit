@@ -1,0 +1,154 @@
+{
+  "sample_id": "215",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "护肤界的天花板！618年中大促福利多多超",
+    "护肤界的天花板！",
+    "价值3,000多的美容仪直接免费送",
+    "原价位媲美千元的质感",
+    "专门针对35以上熟溶肌抗皱"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        12
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        90
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        104
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在诱导消费 模型补上「存在诱导消费」。 口播和画面中多次出现绝对化描述和功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "护肤界的天花板！618年中大促福利多多超",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "护肤界的天花板！",
+      "matched": "护肤界的天花板！",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "价值3,000多的美容仪直接免费送",
+      "matched": "价值3,000多的美容仪直接免费送",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        12
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "原价位媲美千元的质感",
+      "matched": "原价位媲美千元的质感",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        90
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "专门针对35以上熟溶肌抗皱",
+      "matched": "专门针对35以上熟溶肌抗皱",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        104
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

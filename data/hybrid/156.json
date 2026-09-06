@@ -1,0 +1,130 @@
+{
+  "sample_id": "156",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "…女生来说非常友好。然后包括燕珠的话，我们家是中国首个开想鲜对燕窝。人体视觉实验效果的品牌。来经过真实…",
+    "中国首个开展",
+    "28天改善皮肤质量",
+    "请你喝燕窝名额仅剩"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        73,
+        75
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在诱导消费 模型补上「存在诱导消费」。 绝对化用语和夸大功效，以及限时稀缺。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…女生来说非常友好。然后包括燕珠的话，我们家是中国首个开想鲜对燕窝。人体视觉实验效果的品牌。来经过真实…",
+      "matched": "首个",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        73,
+        75
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "中国首个开展",
+      "matched": "首个",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "28天改善皮肤质量",
+      "matched": "28天改善皮肤质量",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "请你喝燕窝名额仅剩",
+      "matched": "请你喝燕窝名额仅剩",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

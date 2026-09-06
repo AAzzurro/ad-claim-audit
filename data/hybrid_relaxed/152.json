@@ -1,0 +1,153 @@
+{
+  "sample_id": "152",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…个品吧。目前来讲，整个的保健品行业里的，咱们算是天花板，咱们不是什么小牌子小作坊啊，很多人讲说之前我满…",
+    "是全球专门以进口为主题的国家级展会",
+    "西班牙商务部指定的营养合作品牌",
+    "奥运会运动员指定的营养合作品牌",
+    "咱们算是天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        106,
+        109
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        12,
+        15
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        14,
+        29
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        32,
+        47
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        102,
+        109
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+    "标注细则：绝对化用语归入夸大功效；《广告法》第十六条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播中明确表示品牌是天花板，且画面中出现多项官方背书和绝对化描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…个品吧。目前来讲，整个的保健品行业里的，咱们算是天花板，咱们不是什么小牌子小作坊啊，很多人讲说之前我满…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        106,
+        109
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "是全球专门以进口为主题的国家级展会",
+      "matched": "国家级",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        12,
+        15
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "西班牙商务部指定的营养合作品牌",
+      "matched": "西班牙商务部指定的营养合作品牌",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        14,
+        29
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "奥运会运动员指定的营养合作品牌",
+      "matched": "奥运会运动员指定的营养合作品牌",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        32,
+        47
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "咱们算是天花板",
+      "matched": "咱们算是天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        102,
+        109
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

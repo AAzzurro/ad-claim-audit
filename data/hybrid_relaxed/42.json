@@ -1,0 +1,28 @@
+{
+  "sample_id": "42",
+  "experiment": "e3",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(3) 有条件描述不必然构成风险；常规促销信息不构成虚假宣传"
+  ],
+  "explanation": "现行法规/任务书词表未命中。未命中不等于人工认定无风险。",
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

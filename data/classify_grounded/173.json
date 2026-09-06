@@ -1,0 +1,70 @@
+{
+  "sample_id": "173",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "1.6亿罐",
+    "上市即热销"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "1.6亿罐",
+      "matched": "1.6亿罐",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "上市即热销",
+      "matched": "上市即热销",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "数据夸大和市场表现断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"1.6亿罐\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"上市即热销\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」\"],\"explanation\":\"数据夸大和市场表现断言。\"}"
+}

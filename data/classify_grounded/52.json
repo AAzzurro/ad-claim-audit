@@ -1,0 +1,71 @@
+{
+  "sample_id": "52",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+    "最后降架了"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        112,
+        146
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        61,
+        66
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+      "matched": "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          112,
+          146
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后降架了",
+      "matched": "最后降架了",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          61,
+          66
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化功效断言，画面中多次出现限时促销信息。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后降架了\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"520礼造季 618年中狂\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"就买红童腰大礼 紧数TOP1 抗皱TOP1 成分功效护肤店铺榜 保湿TOP1 成分TOP1 回购TOP1 品牌护肤宫装好评榜 紧致TOP1 RERASES 品牌护肤营装好评榜 ARECEMLERAN 高端焕跟修护榜 exa LANT KONCE IS 欢效水E痛纹榜 品牌护肤套装好评机 敬形肌护理神店棉门 MIFFE 质优惠 尺抛 到手7件 韩束红童腰礼盒\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」\"],\"explanation\":\"口播中出现绝对化功效断言，画面中多次出现限时促销信息。\"}"
+}

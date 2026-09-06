@@ -1,0 +1,70 @@
+{
+  "sample_id": "193",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "比很多顶级抗老成分还",
+    "脸部状态重返年轻态！"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        10
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        10
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「比很多顶级抗老成分还」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "比很多顶级抗老成分还",
+      "matched": "比很多顶级抗老成分还",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          1,
+          10
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「比很多顶级抗老成分还」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "脸部状态重返年轻态！",
+      "matched": "脸部状态重返年轻态！",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          0,
+          10
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「比很多顶级抗老成分还」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化描述和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"比很多顶级抗老成分还\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"脸部状态重返年轻态！\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「比很多顶级抗老成分还」\"],\"explanation\":\"画面中出现绝对化描述和功效断言。\"}"
+}

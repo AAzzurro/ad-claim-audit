@@ -1,0 +1,104 @@
+{
+  "sample_id": "11",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全新升级第7代|重塑防晒天花板",
+    "重塑防晒天花板",
+    "连续5年销量NO1"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        12,
+        15
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        8,
+        15
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 画面中出现「重塑防晒天花板」和「连续5年销量NO1」，属于绝对化描述和功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全新升级第7代|重塑防晒天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        12,
+        15
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑防晒天花板",
+      "matched": "重塑防晒天花板",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        8,
+        15
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "连续5年销量NO1",
+      "matched": "连续5年销量NO1",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

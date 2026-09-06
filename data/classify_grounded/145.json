@@ -1,0 +1,95 @@
+{
+  "sample_id": "145",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "主食罐头天花板",
+    "24H温和排毛显著排猫",
+    "显著增加"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        9
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「主食罐头天花板」「显著增加」；诱导消费归入限时稀缺"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "主食罐头天花板",
+      "matched": "主食罐头天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「主食罐头天花板」「显著增加」；诱导消费归入限时稀缺",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "24H温和排毛显著排猫",
+      "matched": "24H温和排毛显著排猫",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          2,
+          9
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「主食罐头天花板」「显著增加」；诱导消费归入限时稀缺",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "显著增加",
+      "matched": "显著增加",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「主食罐头天花板」「显著增加」；诱导消费归入限时稀缺",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中出现显著增加排毛效果，画面中出现主食罐头天花板和买3送4，均构成风险。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"主食罐头天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"24H温和排毛显著排猫\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"显著增加\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"买3送4\",\"source\":\"visual\"}],\"rule_basis\":[\"绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「主食罐头天花板」「显著增加」；诱导消费归入限时稀缺\"],\"explanation\":\"口播中出现显著增加排毛效果，画面中出现主食罐头天花板和买3送4，均构成风险。\"}"
+}

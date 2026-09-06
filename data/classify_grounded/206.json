@@ -1,0 +1,70 @@
+{
+  "sample_id": "206",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球首创乳蛋白鲜萃提取科技",
+    "国际领先低温分离技术，是一次物理萃取天然活性蛋白的科技革命"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        4
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        3,
+        7
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「国际领先」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球首创乳蛋白鲜萃提取科技",
+      "matched": "全球首创乳蛋白鲜萃提取科技",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「国际领先」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "国际领先低温分离技术，是一次物理萃取天然活性蛋白的科技革命",
+      "matched": "国际领先低温分离技术，是一次物理萃取天然活性蛋白的科技革命",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          3,
+          7
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「国际领先」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播和画面中均出现绝对化用语和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"全球首创乳蛋白鲜萃提取科技\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"国际领先低温分离技术，是一次物理萃取天然活性蛋白的科技革命\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「国际领先」\"],\"explanation\":\"口播和画面中均出现绝对化用语和功效断言。\"}"
+}

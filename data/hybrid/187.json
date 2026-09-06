@@ -1,0 +1,55 @@
+{
+  "sample_id": "187",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "十分珍贵，100千克的咖啡豆才能提取出0.5000克的咖啡籽油"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        41,
+        72
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条「等」与第十七条、十八条不得涉及疾病治疗；任务书示例「十分珍贵」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 描述为十分珍贵，暗示产品独特性，可能构成夸大功效。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "十分珍贵，100千克的咖啡豆才能提取出0.5000克的咖啡籽油",
+      "matched": "十分珍贵，100千克的咖啡豆才能提取出0.5000克的咖啡籽油",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        41,
+        72
+      ],
+      "rule_basis": "《广告法》第九条「等」与第十七条、十八条不得涉及疾病治疗；任务书示例「十分珍贵」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

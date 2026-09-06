@@ -103,6 +103,26 @@ def resize_frame(frame: np.ndarray, max_width: int) -> np.ndarray:
     return cv2.resize(frame, new_size, interpolation=cv2.INTER_AREA)
 
 
+def extract_frame_at(
+    video_path: Path,
+    time_sec: float,
+    max_width: int = 1280,
+) -> np.ndarray | None:
+    """抽取指定时刻的一帧，尺寸与 OCR 抽帧一致。"""
+    cap = cv2.VideoCapture(str(video_path))
+    if not cap.isOpened():
+        cap.release()
+        return None
+    try:
+        cap.set(cv2.CAP_PROP_POS_MSEC, max(0.0, float(time_sec)) * 1000.0)
+        ok, frame = cap.read()
+        if not ok or frame is None:
+            return None
+        return resize_frame(frame, max_width)
+    finally:
+        cap.release()
+
+
 def iter_frames(
     video_path: Path,
     interval: float,

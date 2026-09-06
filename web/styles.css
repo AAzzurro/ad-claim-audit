@@ -293,6 +293,7 @@ body {
 }
 
 .stage-actions {
+  position: relative;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -314,6 +315,23 @@ body {
 .ghost-btn:hover,
 .icon-x:hover {
   background: rgba(224, 196, 138, 0.08);
+}
+
+.ghost-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sr-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .panel-col {
@@ -594,6 +612,98 @@ body {
 .engine-row b {
   color: var(--ink);
   font-weight: 500;
+}
+
+.frames {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.frame-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 10px;
+}
+
+.frame-card {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0c0d11;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.frame-card:hover {
+  border-color: var(--gold);
+}
+
+.frame-card img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  display: block;
+  background: #050608;
+}
+
+.frame-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px 10px;
+}
+
+.frame-meta b {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.frame-meta em {
+  font-style: normal;
+  color: var(--dim);
+  font-size: 11px;
+}
+
+.frame-meta small {
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.frame-thumb {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #0c0d11;
+  color: var(--gold);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.frame-thumb img {
+  width: 46px;
+  height: 72px;
+  object-fit: cover;
+  display: block;
+  background: #050608;
+}
+
+.frame-thumb span {
+  padding-right: 10px;
 }
 
 .tabs {

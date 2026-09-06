@@ -1,0 +1,45 @@
+{
+  "sample_id": "10",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "活动就一天！抓紧"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        16
+      ]
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "活动就一天！抓紧",
+      "matched": "活动就一天！抓紧",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          8,
+          16
+        ]
+      },
+      "rule_basis": "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中多次出现限时活动和诱导消费信息，且有站外导流风险。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在站外导流风险线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"活动就一天！抓紧\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"买4包送品15油）\",\"source\":\"visual\"},{\"label\":\"存在站外导流风险线索\",\"text\":\"拍1发4包\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"画面中多次出现限时活动和诱导消费信息，且有站外导流风险。\"}"
+}

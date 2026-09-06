@@ -1,0 +1,70 @@
+{
+  "sample_id": "133",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "增强...",
+    "旗舰蓝罐300g"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        1,
+        6
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "增强...",
+      "matched": "增强...",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          1,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "旗舰蓝罐300g",
+      "matched": "旗舰蓝罐300g",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播中提到「增强...」，画面中出现「旗舰蓝罐300g」，可能暗示该产品为顶级或最佳。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"增强...\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"旗舰蓝罐300g\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」\"],\"explanation\":\"口播中提到「增强...」，画面中出现「旗舰蓝罐300g」，可能暗示该产品为顶级或最佳。\"}"
+}

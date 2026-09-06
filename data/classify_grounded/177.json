@@ -1,0 +1,83 @@
+{
+  "sample_id": "177",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "杜绝肌肤的过敏问题",
+    "7天肤质焕新",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        9,
+        15
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "杜绝肌肤的过敏问题",
+      "matched": "杜绝肌肤的过敏问题",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "7天肤质焕新",
+      "matched": "7天肤质焕新",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          9,
+          15
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化断言和功效断言，画面中出现7天肤质焕新和诱导消费信息。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"杜绝肌肤的过敏问题\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"7天肤质焕新\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"}],\"rule_basis\":[\"绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。\"],\"explanation\":\"口播中出现绝对化断言和功效断言，画面中出现7天肤质焕新和诱导消费信息。\"}"
+}

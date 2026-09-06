@@ -1,0 +1,57 @@
+{
+  "sample_id": "177",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "7天肤质焕新"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        9,
+        15
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 口播中出现绝对化断言和功效断言，画面中出现7天肤质焕新和诱导消费信息。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "7天肤质焕新",
+      "matched": "7天肤质焕新",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        9,
+        15
+      ],
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「杜绝」「7天肤质焕新」；限时促销归入诱导消费。",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "sample_id": "154",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业最强",
+    "巨无霸青海湖电",
+    "10000mAh",
+    "185Hz"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业最强",
+      "matched": "行业最强",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "巨无霸青海湖电",
+      "matched": "巨无霸青海湖电",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "10000mAh",
+      "matched": "10000mAh",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "185Hz",
+      "matched": "185Hz",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "画面中多次出现绝对化用语和具体性能参数断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"行业最强\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"巨无霸青海湖电\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"10000mAh\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"185Hz\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业最强」「10000mAh」「185Hz」\"],\"explanation\":\"画面中多次出现绝对化用语和具体性能参数断言。\"}"
+}

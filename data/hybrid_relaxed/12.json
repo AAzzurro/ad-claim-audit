@@ -1,0 +1,106 @@
+{
+  "sample_id": "12",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全新升级第7代|重塑防晒天花板",
+    "美白祛斑酸的证持证上岗有证才效",
+    "重塑防晒天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        12,
+        15
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        1,
+        16
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        8,
+        15
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在诱导消费 模型补上「存在诱导消费」。 口播未出现明显风险，但画面中多次出现绝对化描述和夸大功效，且有诱导消费的提示。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全新升级第7代|重塑防晒天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        12,
+        15
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "美白祛斑酸的证持证上岗有证才效",
+      "matched": "美白祛斑酸的证持证上岗有证才效",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        1,
+        16
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑防晒天花板",
+      "matched": "重塑防晒天花板",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        8,
+        15
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

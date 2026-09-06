@@ -1,0 +1,70 @@
+{
+  "sample_id": "146",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "主食罐头天花板",
+    "显著排毛"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        160,
+        164
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "主食罐头天花板",
+      "matched": "主食罐头天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "显著排毛",
+      "matched": "显著排毛",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          160,
+          164
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化用语和显著排毛效果断言，同时有限时促销信息。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"主食罐头天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"显著排毛\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"限时买3送4\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字\"],\"explanation\":\"画面中出现绝对化用语和显著排毛效果断言，同时有限时促销信息。\"}"
+}

@@ -1,0 +1,121 @@
+{
+  "sample_id": "150",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "今天保证给大家历史最低价不反复不依赖",
+    "早上卖完断货",
+    "2000%*直入肺源呵护",
+    "20倍高吸收率"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        93,
+        111
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        6
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        12
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        7
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "今天保证给大家历史最低价不反复不依赖",
+      "matched": "今天保证给大家历史最低价不反复不依赖",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          93,
+          111
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "早上卖完断货",
+      "matched": "早上卖完断货",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "2000%*直入肺源呵护",
+      "matched": "2000%*直入肺源呵护",
+      "evidence_position": {
+        "source": "visual",
+        "time": 15.0,
+        "span": [
+          0,
+          12
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "20倍高吸收率",
+      "matched": "20倍高吸收率",
+      "evidence_position": {
+        "source": "visual",
+        "time": 18.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "口播和画面中均出现诱导消费和夸大功效的表述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"今天保证给大家历史最低价不反复不依赖\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"早上卖完断货\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"2000%*直入肺源呵护\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"20倍高吸收率\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效；任务书示例「历史最低价」「断货」\"],\"explanation\":\"口播和画面中均出现诱导消费和夸大功效的表述。\"}"
+}

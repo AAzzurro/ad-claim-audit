@@ -1,0 +1,105 @@
+{
+  "sample_id": "5",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在站外导流风险线索"
+  ],
+  "evidence": [
+    "15天内发货",
+    "晚发立赔过敏包退",
+    "ANSRSN777"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费和站外导流风险线索示例"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在站外导流风险线索 模型补上「存在诱导消费、存在站外导流风险线索」。 发货时间承诺和站外导流标识符。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "15天内发货",
+      "matched": "15天内发货",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费和站外导流风险线索示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "晚发立赔过敏包退",
+      "matched": "晚发立赔过敏包退",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费和站外导流风险线索示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在站外导流风险线索",
+      "evidence": "ANSRSN777",
+      "matched": "ANSRSN777",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费和站外导流风险线索示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在站外导流风险线索"
+      ]
+    }
+  }
+}

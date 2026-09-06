@@ -1,0 +1,81 @@
+{
+  "sample_id": "84",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "全年送最多",
+    "红满要是抗皱效果家"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        42,
+        47
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        159,
+        168
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 限时促销归入诱导消费；9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 全年送最多构成诱导消费，红满要是抗皱效果家属于迷信运气承诺。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年送最多",
+      "matched": "全年送最多",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        42,
+        47
+      ],
+      "rule_basis": "任务书 9(2) 限时促销归入诱导消费；9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "红满要是抗皱效果家",
+      "matched": "红满要是抗皱效果家",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        159,
+        168
+      ],
+      "rule_basis": "任务书 9(2) 限时促销归入诱导消费；9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

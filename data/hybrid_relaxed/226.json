@@ -1,0 +1,104 @@
+{
+  "sample_id": "226",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…知道肽用在航天的，生在医疗的抗腐蚀抗菌的能力都是天花板的，来用这个烧水喝，能不放心吗？在每一个功能下面…",
+    "抗腐蚀抗菌的能力都是天花板的",
+    "抗腐蚀抗菌的能力都是天花板的"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        90,
+        93
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        10,
+        13
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        94
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化用语归入夸大功效；《广告法》第十六条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播中出现绝对化用语「抗腐蚀抗菌的能力都是天花板的」。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…知道肽用在航天的，生在医疗的抗腐蚀抗菌的能力都是天花板的，来用这个烧水喝，能不放心吗？在每一个功能下面…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        90,
+        93
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗腐蚀抗菌的能力都是天花板的",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        10,
+        13
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗腐蚀抗菌的能力都是天花板的",
+      "matched": "抗腐蚀抗菌的能力都是天花板的",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        94
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

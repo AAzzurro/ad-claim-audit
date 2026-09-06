@@ -1,0 +1,128 @@
+{
+  "sample_id": "218",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球顶级",
+    "开山鼻祖",
+    "定义了健康和高端的全部内涵",
+    "最昂贵的安慰剂"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        10,
+        14
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        1,
+        14
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+    "《广告法》第九条；任务书示例「开山鼻祖」「定义了健康和高端的全部内涵」「最昂贵的安慰剂」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化表述加功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球顶级",
+      "matched": "顶级",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "开山鼻祖",
+      "matched": "开山鼻祖",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        10,
+        14
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「开山鼻祖」「定义了健康和高端的全部内涵」「最昂贵的安慰剂」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "定义了健康和高端的全部内涵",
+      "matched": "定义了健康和高端的全部内涵",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        1,
+        14
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「开山鼻祖」「定义了健康和高端的全部内涵」「最昂贵的安慰剂」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "最昂贵的安慰剂",
+      "matched": "最昂贵的安慰剂",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「开山鼻祖」「定义了健康和高端的全部内涵」「最昂贵的安慰剂」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

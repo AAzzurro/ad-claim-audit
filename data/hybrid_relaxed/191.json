@@ -1,0 +1,55 @@
+{
+  "sample_id": "191",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在其他线索"
+  ],
+  "evidence": [
+    "带来好运"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        37,
+        41
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "explanation": "模型命中：存在其他线索 模型补上「存在其他线索」。 口播中多次提及紫色饰品和衣服能带来好运，属于迷信运气承诺。",
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "带来好运",
+      "matched": "带来好运",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        37,
+        41
+      ],
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在其他线索"
+      ]
+    }
+  }
+}

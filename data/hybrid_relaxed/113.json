@@ -1,0 +1,105 @@
+{
+  "sample_id": "113",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "保价3年",
+    "首次破价，首次破价来一号链接，一号链接不要399啊，直接降价，一号链接低于399，直接拍",
+    "520送女友"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        9,
+        13
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        20,
+        64
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        1,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费；《广告法》第二十四条；其他线索示例"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 保价和限时优惠构成诱导消费，520送女友属于其他线索。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "保价3年",
+      "matched": "保价3年",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        9,
+        13
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费；《广告法》第二十四条；其他线索示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "首次破价，首次破价来一号链接，一号链接不要399啊，直接降价，一号链接低于399，直接拍",
+      "matched": "首次破价，首次破价来一号链接，一号链接不要399啊，直接降价，一号链接低于399，直接拍",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        20,
+        64
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费；《广告法》第二十四条；其他线索示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "520送女友",
+      "matched": "520送女友",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        1,
+        7
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费；《广告法》第二十四条；其他线索示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "sample_id": "112",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业天花板",
+    "改善肌肤8大问题",
+    "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        5,
+        13
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业天花板",
+      "matched": "行业天花板",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善肌肤8大问题",
+      "matched": "改善肌肤8大问题",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          5,
+          13
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑",
+      "matched": "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "画面和口播中多次出现绝对化描述和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"行业天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"改善肌肤8大问题\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」\"],\"explanation\":\"画面和口播中多次出现绝对化描述和功效断言。\"}"
+}

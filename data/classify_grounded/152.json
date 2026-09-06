@@ -1,0 +1,95 @@
+{
+  "sample_id": "152",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "西班牙商务部指定的营养合作品牌",
+    "奥运会运动员指定的营养合作品牌",
+    "咱们算是天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        14,
+        29
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        32,
+        47
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        102,
+        109
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语归入夸大功效；《广告法》第十六条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "西班牙商务部指定的营养合作品牌",
+      "matched": "西班牙商务部指定的营养合作品牌",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          14,
+          29
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "奥运会运动员指定的营养合作品牌",
+      "matched": "奥运会运动员指定的营养合作品牌",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          32,
+          47
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "咱们算是天花板",
+      "matched": "咱们算是天花板",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          102,
+          109
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中明确表示品牌是天花板，且画面中出现多项官方背书和绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"西班牙商务部指定的营养合作品牌\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"奥运会运动员指定的营养合作品牌\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"咱们算是天花板\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化用语归入夸大功效；《广告法》第十六条\"],\"explanation\":\"口播中明确表示品牌是天花板，且画面中出现多项官方背书和绝对化描述。\"}"
+}

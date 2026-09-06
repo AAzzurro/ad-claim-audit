@@ -1,0 +1,55 @@
+{
+  "sample_id": "177",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "7天肤质焕新"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        9,
+        15
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中提到杜绝过敏问题和7天焕新，画面中有多处诱导消费信息。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "7天肤质焕新",
+      "matched": "7天肤质焕新",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        9,
+        15
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

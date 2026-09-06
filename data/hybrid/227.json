@@ -1,0 +1,128 @@
+{
+  "sample_id": "227",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…这样啊，直接挖着吃，一口一个超级过瘾，百香果店的天花板。姐妹们给你找过来了，就是这个黄金百香果。你看这…",
+    "百香果界的天花板",
+    "百香果界的天花板",
+    "完全可以代替我们在市面上买的那些科技鱼很活"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        255,
+        258
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 54.0,
+      "span": [
+        5,
+        8
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 54.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        204,
+        225
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条、第十七条；任务书示例「天花板」「科技鱼很活」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化用语加虚构功效。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…这样啊，直接挖着吃，一口一个超级过瘾，百香果店的天花板。姐妹们给你找过来了，就是这个黄金百香果。你看这…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        255,
+        258
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "百香果界的天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 54.0,
+      "span": [
+        5,
+        8
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "百香果界的天花板",
+      "matched": "百香果界的天花板",
+      "source": "visual",
+      "time": 54.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「天花板」「科技鱼很活」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "完全可以代替我们在市面上买的那些科技鱼很活",
+      "matched": "完全可以代替我们在市面上买的那些科技鱼很活",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        204,
+        225
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「天花板」「科技鱼很活」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

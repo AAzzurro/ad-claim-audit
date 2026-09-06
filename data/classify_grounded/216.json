@@ -1,0 +1,64 @@
+{
+  "sample_id": "216",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "真的特别管用的整容与变美斜招",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        57,
+        71
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "真的特别管用的整容与变美斜招",
+      "matched": "真的特别管用的整容与变美斜招",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          57,
+          71
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化描述和整容变美斜招，画面中出现最后几单。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"真的特别管用的整容与变美斜招\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"}],\"rule_basis\":[\"绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字\"],\"explanation\":\"口播中出现绝对化描述和整容变美斜招，画面中出现最后几单。\"}"
+}

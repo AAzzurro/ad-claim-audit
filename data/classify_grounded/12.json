@@ -1,0 +1,89 @@
+{
+  "sample_id": "12",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "美白祛斑酸的证持证上岗有证才效",
+    "重塑防晒天花板",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        1,
+        16
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        8,
+        15
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "美白祛斑酸的证持证上岗有证才效",
+      "matched": "美白祛斑酸的证持证上岗有证才效",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          1,
+          16
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑防晒天花板",
+      "matched": "重塑防晒天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          8,
+          15
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播未出现明显风险，但画面中多次出现绝对化描述和夸大功效，且有诱导消费的提示。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"美白祛斑酸的证持证上岗有证才效\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"重塑防晒天花板\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条功效断言；任务书示例「美白祛斑酸」「重塑防晒天花板」；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"口播未出现明显风险，但画面中多次出现绝对化描述和夸大功效，且有诱导消费的提示。\"}"
+}

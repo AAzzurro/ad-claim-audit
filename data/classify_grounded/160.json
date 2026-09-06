@@ -1,0 +1,189 @@
+{
+  "sample_id": "160",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "没有任何不良反应",
+    "对的心肝脾胃是没有任何影响",
+    "重式减肥",
+    "02效场病",
+    "02饮场病",
+    "02青饮场剂",
+    "净含量21g(3g/袋x7m)"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        2,
+        10
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        49
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        6
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 24.0,
+      "span": [
+        0,
+        15
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "没有任何不良反应",
+      "matched": "没有任何不良反应",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          2,
+          10
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "对的心肝脾胃是没有任何影响",
+      "matched": "对的心肝脾胃是没有任何影响",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重式减肥",
+      "matched": "重式减肥",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          45,
+          49
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "02效场病",
+      "matched": "02效场病",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "02饮场病",
+      "matched": "02饮场病",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "02青饮场剂",
+      "matched": "02青饮场剂",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "净含量21g(3g/袋x7m)",
+      "matched": "净含量21g(3g/袋x7m)",
+      "evidence_position": {
+        "source": "visual",
+        "time": 24.0,
+        "span": [
+          0,
+          15
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 7,
+  "n_hedged": 0,
+  "explanation": "口播和画面中多次出现对健康功效的断言，且涉及具体疾病。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"没有任何不良反应\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"对的心肝脾胃是没有任何影响\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"重式减肥\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"02效场病\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"02饮场病\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"02青饮场剂\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"净含量21g(3g/袋x7m)\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条、第二十八条；任务书示例「没有任何不良反应」「对的心肝脾胃是没有任何影响」「重式减肥」「02效场病」「02饮场病」「02青饮场剂」\"],\"explanation\":\"口播和画面中多次出现对健康功效的断言，且涉及具体疾病。\"}"
+}

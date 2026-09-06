@@ -1,0 +1,45 @@
+{
+  "sample_id": "20",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "最后最后十4箱630个名额"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        0,
+        13
+      ]
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 限时稀缺与诱导消费；9(4) 站外导流"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后最后十4箱630个名额",
+      "matched": "最后最后十4箱630个名额",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          0,
+          13
+        ]
+      },
+      "rule_basis": "任务书 9(2) 限时稀缺与诱导消费；9(4) 站外导流",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中出现限时稀缺和诱导消费，画面中有引导私域下单的提示。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"最后最后十4箱630个名额\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"限时秒杀\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"拍下链接\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 限时稀缺与诱导消费；9(4) 站外导流\"],\"explanation\":\"口播中出现限时稀缺和诱导消费，画面中有引导私域下单的提示。\"}"
+}

@@ -1,0 +1,128 @@
+{
+  "sample_id": "57",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…的鲜活。多个AI观影智能体百万聚集，模糊搜索行业首个AI服务智能体卢小班24小时待命。AI健康智能体…",
+    "行业首个AI服务智能体",
+    "守护孩子的每一帧好奇",
+    "唯一通过专业资格考试的智能体"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        85,
+        87
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        26,
+        33
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        112,
+        126
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 涉及绝对化断言、诱导消费及迷信内容。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…的鲜活。多个AI观影智能体百万聚集，模糊搜索行业首个AI服务智能体卢小班24小时待命。AI健康智能体…",
+      "matched": "首个",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        85,
+        87
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业首个AI服务智能体",
+      "matched": "首个",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "守护孩子的每一帧好奇",
+      "matched": "守护孩子的每一帧好奇",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        26,
+        33
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "唯一通过专业资格考试的智能体",
+      "matched": "唯一通过专业资格考试的智能体",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        112,
+        126
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

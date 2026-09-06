@@ -1,0 +1,81 @@
+{
+  "sample_id": "1",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "2号链接你拍下了，宝宝",
+    "最高领取20元"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        103,
+        114
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费和站外导流；《广告法》第二十五条"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 口播中有诱导消费行为，画面中出现最高领取优惠构成其他线索。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "2号链接你拍下了，宝宝",
+      "matched": "2号链接你拍下了，宝宝",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        103,
+        114
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费和站外导流；《广告法》第二十五条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "最高领取20元",
+      "matched": "最高领取20元",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费和站外导流；《广告法》第二十五条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

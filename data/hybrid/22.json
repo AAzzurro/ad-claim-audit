@@ -1,0 +1,129 @@
+{
+  "sample_id": "22",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…，那么自由飞翔老板，然后主题是0珑白这个外观行业首款获者莱茵护眼五星认证的只有飞翔老板能听得清吗？嗯…",
+    "色域天花板",
+    "行业唯一",
+    "色域天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        121,
+        123
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化断言、虚构最低价、诱导消费、站外导流。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…，那么自由飞翔老板，然后主题是0珑白这个外观行业首款获者莱茵护眼五星认证的只有飞翔老板能听得清吗？嗯…",
+      "matched": "首款",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        121,
+        123
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "色域天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业唯一",
+      "matched": "行业唯一",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "色域天花板",
+      "matched": "色域天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

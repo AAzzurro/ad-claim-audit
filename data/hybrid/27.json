@@ -1,0 +1,80 @@
+{
+  "sample_id": "27",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "灵感源自院线注时成分 首创M35CPDRN",
+    "一周没有创口，年轻5岁"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        11,
+        13
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        102
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、十七条；任务书示例「一周没有创口，年轻5岁」、「最后几单」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 一周内年轻5岁为绝对化断言，最后几单为诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "灵感源自院线注时成分 首创M35CPDRN",
+      "matched": "首创",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        11,
+        13
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "一周没有创口，年轻5岁",
+      "matched": "一周没有创口，年轻5岁",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        102
+      ],
+      "rule_basis": "《广告法》第九条、十七条；任务书示例「一周没有创口，年轻5岁」、「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

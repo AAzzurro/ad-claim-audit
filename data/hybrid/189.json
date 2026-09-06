@@ -1,0 +1,127 @@
+{
+  "sample_id": "189",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球的产量都极其极其人限",
+    "专供皇室使用",
+    "被称为精油之王",
+    "数一数二"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        20,
+        32
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        3,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条；任务书示例「专供皇室使用」「精油之王」「数一数二」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 全球产量极其有限、专供皇室使用、被称为精油之王、数一数二均为绝对化表述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球的产量都极其极其人限",
+      "matched": "全球的产量都极其极其人限",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        20,
+        32
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「专供皇室使用」「精油之王」「数一数二」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "专供皇室使用",
+      "matched": "专供皇室使用",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「专供皇室使用」「精油之王」「数一数二」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "被称为精油之王",
+      "matched": "被称为精油之王",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        10
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「专供皇室使用」「精油之王」「数一数二」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "数一数二",
+      "matched": "数一数二",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        3,
+        7
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「专供皇室使用」「精油之王」「数一数二」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

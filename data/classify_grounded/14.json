@@ -1,0 +1,270 @@
+{
+  "sample_id": "14",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "95%以上的皮肤问题都是你晒出来的",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍",
+    "防晒不到位，肌肤老10倍"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        15,
+        32
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "95%以上的皮肤问题都是你晒出来的",
+      "matched": "95%以上的皮肤问题都是你晒出来的",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          15,
+          32
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒不到位，肌肤老10倍",
+      "matched": "防晒不到位，肌肤老10倍",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 10,
+  "n_hedged": 0,
+  "explanation": "多次强调防晒的重要性，暗示不防晒会导致肌肤老化。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"95%以上的皮肤问题都是你晒出来的\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒不到位，肌肤老10倍\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「95%以上的皮肤问题都是你晒出来的」「防晒不到位，肌肤老10倍」\"],\"explanation\":\"多次强调防晒的重要性，暗示不防晒会导致肌肤老化。\"}"
+}

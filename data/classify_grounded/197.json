@@ -1,0 +1,45 @@
+{
+  "sample_id": "197",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "绝对天花板级别的"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「绝对天花板」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "绝对天花板级别的",
+      "matched": "绝对天花板级别的",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「绝对天花板」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化用语「绝对天花板级别的」。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"绝对天花板级别的\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「绝对天花板」\"],\"explanation\":\"画面中出现绝对化用语「绝对天花板级别的」。\"}"
+}

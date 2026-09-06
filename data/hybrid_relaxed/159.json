@@ -1,0 +1,57 @@
+{
+  "sample_id": "159",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "立即抢购"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 画面中出现「全国第一」，口播中提及「立即抢购」。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "立即抢购",
+      "matched": "立即抢购",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

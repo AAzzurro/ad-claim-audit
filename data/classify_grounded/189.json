@@ -1,0 +1,95 @@
+{
+  "sample_id": "189",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球的产量都极其极其人限",
+    "它是专供皇室使用的，被称为精油之王",
+    "身体层面的修护和心灵层面的修复它都是属于数一数二的"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        20,
+        32
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        51,
+        71
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「全球产量极其有限」「专供皇室」「精油之王」「数一数二」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球的产量都极其极其人限",
+      "matched": "全球的产量都极其极其人限",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          20,
+          32
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「全球产量极其有限」「专供皇室」「精油之王」「数一数二」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "它是专供皇室使用的，被称为精油之王",
+      "matched": "它是专供皇室使用的，被称为精油之王",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「全球产量极其有限」「专供皇室」「精油之王」「数一数二」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "身体层面的修护和心灵层面的修复它都是属于数一数二的",
+      "matched": "身体层面的修护和心灵层面的修复它都是属于数一数二的",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          51,
+          71
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「全球产量极其有限」「专供皇室」「精油之王」「数一数二」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播和画面中多次出现绝对化描述和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"全球的产量都极其极其人限\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"它是专供皇室使用的，被称为精油之王\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"身体层面的修护和心灵层面的修复它都是属于数一数二的\",\"source\":\"audio\"}],\"rule_basis\":[\"《广告法》第十六条功效断言；任务书示例「全球产量极其有限」「专供皇室」「精油之王」「数一数二」\"],\"explanation\":\"口播和画面中多次出现绝对化描述和功效断言。\"}"
+}

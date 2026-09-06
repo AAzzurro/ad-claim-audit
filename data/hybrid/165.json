@@ -1,0 +1,104 @@
+{
+  "sample_id": "165",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "保健食品不是药镜，不能代赞码物治疗疾病。",
+    "食品不是药物，不超代替药物治疗疾病，",
+    "治过架骨大过桥的，做啥手术的，咱就教到你中去用"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        15,
+        17
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        9,
+        13
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        44,
+        67
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 手术治疗描述绝对化；抢购诱导消费；虚构轻盈效果。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "保健食品不是药镜，不能代赞码物治疗疾病。",
+      "matched": "治疗",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        15,
+        17
+      ],
+      "rule_basis": "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "食品不是药物，不超代替药物治疗疾病，",
+      "matched": "代替药物",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        9,
+        13
+      ],
+      "rule_basis": "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "治过架骨大过桥的，做啥手术的，咱就教到你中去用",
+      "matched": "治过架骨大过桥的，做啥手术的，咱就教到你中去用",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        44,
+        67
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

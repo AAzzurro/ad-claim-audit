@@ -1,0 +1,89 @@
+{
+  "sample_id": "85",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "所有效果，真人评估都坚定满分",
+    "14天改善",
+    "改善毛孔面体"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        14,
+        20
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「所有效果」「坚定满分」「14天改善」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "所有效果，真人评估都坚定满分",
+      "matched": "所有效果，真人评估都坚定满分",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「所有效果」「坚定满分」「14天改善」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天改善",
+      "matched": "14天改善",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「所有效果」「坚定满分」「14天改善」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善毛孔面体",
+      "matched": "改善毛孔面体",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          14,
+          20
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「所有效果」「坚定满分」「14天改善」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中多次出现绝对化断言和具体功效承诺。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"所有效果，真人评估都坚定满分\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"14天改善\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"改善毛孔面体\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「所有效果」「坚定满分」「14天改善」\"],\"explanation\":\"口播中多次出现绝对化断言和具体功效承诺。\"}"
+}

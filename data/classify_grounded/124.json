@@ -1,0 +1,45 @@
+{
+  "sample_id": "124",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "最后一波了"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        72,
+        77
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；站外导流归入站外导流风险线索。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后一波了",
+      "matched": "最后一波了",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          72,
+          77
+        ]
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；站外导流归入站外导流风险线索。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中有多次催单，画面中多次出现拍下链接。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在站外导流风险线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"最后一波了\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"拍下链接\",\"source\":\"visual\"},{\"label\":\"存在站外导流风险线索\",\"text\":\"拍下链接\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时稀缺与价格误导归入诱导消费；站外导流归入站外导流风险线索。风险常在画面叠字\"],\"explanation\":\"口播中有多次催单，画面中多次出现拍下链接。\"}"
+}

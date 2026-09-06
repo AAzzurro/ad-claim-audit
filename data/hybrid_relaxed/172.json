@@ -1,0 +1,79 @@
+{
+  "sample_id": "172",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "真美白真祛斑",
+    "连你脸上顽过的一些我们的黄褐斑也好的，甚至你那些十多年20分的老年斑都能淡化。"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        34,
+        40
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        143,
+        182
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中多次提及美白和祛斑效果，且描述具体到黄褐斑和老年斑，属于绝对化断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "真美白真祛斑",
+      "matched": "真美白真祛斑",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        34,
+        40
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "连你脸上顽过的一些我们的黄褐斑也好的，甚至你那些十多年20分的老年斑都能淡化。",
+      "matched": "连你脸上顽过的一些我们的黄褐斑也好的，甚至你那些十多年20分的老年斑都能淡化。",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        143,
+        182
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "sample_id": "168",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "仅剩5天",
+    "行业天花板",
+    "三天见效"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "仅剩5天",
+      "matched": "仅剩5天",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业天花板",
+      "matched": "行业天花板",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "三天见效",
+      "matched": "三天见效",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化用语和限时促销信息。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"仅剩5天\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"秒杀\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"行业天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"三天见效\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字\"],\"explanation\":\"画面中出现绝对化用语和限时促销信息。\"}"
+}

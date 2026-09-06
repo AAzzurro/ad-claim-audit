@@ -1,0 +1,105 @@
+{
+  "sample_id": "114",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "保价3年，首次破价，首次破价来",
+    "一号链接低于399，直接拍",
+    "全现货"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        70,
+        75
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        113,
+        126
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；《直播电商监督管理办法》第三十二条；其他线索归入站外导流"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 口播中多次提及保价和限时低价，且有站外导流风险。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "保价3年，首次破价，首次破价来",
+      "matched": "保价3年，首次破价，首次破价来",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        70,
+        75
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《直播电商监督管理办法》第三十二条；其他线索归入站外导流",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "一号链接低于399，直接拍",
+      "matched": "一号链接低于399，直接拍",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        113,
+        126
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《直播电商监督管理办法》第三十二条；其他线索归入站外导流",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "全现货",
+      "matched": "全现货",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《直播电商监督管理办法》第三十二条；其他线索归入站外导流",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

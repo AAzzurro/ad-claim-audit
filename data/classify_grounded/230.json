@@ -1,0 +1,95 @@
+{
+  "sample_id": "230",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球一线奢侈品牌常用的殿堂级亚麻面料",
+    "肉眼可见的麻纤维在里面",
+    "从内到外的吸湿排汗透气"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        3,
+        21
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        102
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        115,
+        126
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：功效断言；任务书示例「高端材质」「殿堂级面料」「吸湿排汗透气」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球一线奢侈品牌常用的殿堂级亚麻面料",
+      "matched": "全球一线奢侈品牌常用的殿堂级亚麻面料",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          3,
+          21
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：功效断言；任务书示例「高端材质」「殿堂级面料」「吸湿排汗透气」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "肉眼可见的麻纤维在里面",
+      "matched": "肉眼可见的麻纤维在里面",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          91,
+          102
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：功效断言；任务书示例「高端材质」「殿堂级面料」「吸湿排汗透气」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "从内到外的吸湿排汗透气",
+      "matched": "从内到外的吸湿排汗透气",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          115,
+          126
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：功效断言；任务书示例「高端材质」「殿堂级面料」「吸湿排汗透气」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中多次提及高端材质和吸湿排汗透气等功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"全球一线奢侈品牌常用的殿堂级亚麻面料\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"肉眼可见的麻纤维在里面\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"从内到外的吸湿排汗透气\",\"source\":\"audio\"}],\"rule_basis\":[\"《广告法》第十六条：功效断言；任务书示例「高端材质」「殿堂级面料」「吸湿排汗透气」\"],\"explanation\":\"口播中多次提及高端材质和吸湿排汗透气等功效断言。\"}"
+}

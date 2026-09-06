@@ -1,0 +1,154 @@
+{
+  "sample_id": "9",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "王，天花板就选择头等舱，百万宝妈",
+    "天花板就选择头等舱，百万宝妈",
+    "买4包送品15强1",
+    "买A包送消品15送1",
+    "买4包送端品15吨1"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        5
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        16
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在诱导消费 模型补上「存在诱导消费」。 口播无明显风险，但画面中有多处绝对化描述和诱导消费信息。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "王，天花板就选择头等舱，百万宝妈",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        5
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "天花板就选择头等舱，百万宝妈",
+      "matched": "天花板就选择头等舱，百万宝妈",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        16
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "买4包送品15强1",
+      "matched": "买4包送品15强1",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "买A包送消品15送1",
+      "matched": "买A包送消品15送1",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "买4包送端品15吨1",
+      "matched": "买4包送端品15吨1",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "sample_id": "9",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "王，天花板就选择头等舱，百万宝妈",
+    "天花板就选择头等舱，百万宝妈"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        5
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        16
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条、第十七条、十八条；任务书示例"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化用语、诱导消费、迷信好运。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "王，天花板就选择头等舱，百万宝妈",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        5
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "天花板就选择头等舱，百万宝妈",
+      "matched": "天花板就选择头等舱，百万宝妈",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        16
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

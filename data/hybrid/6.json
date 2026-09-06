@@ -1,0 +1,79 @@
+{
+  "sample_id": "6",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "即刻紧致少女如春",
+    "重塑私密「年轻态」"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、第十八条；任务书示例"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 诱导消费、虚假收益承诺和夸大功效均有明确风险。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "即刻紧致少女如春",
+      "matched": "即刻紧致少女如春",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、第十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑私密「年轻态」",
+      "matched": "重塑私密「年轻态」",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、第十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

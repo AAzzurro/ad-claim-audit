@@ -1,0 +1,105 @@
+{
+  "sample_id": "184",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全程售后保障，对您负责！",
+    "假一赔十",
+    "过期不候！"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        12
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 夸大功效、虚假收益承诺和诱导消费均有明确风险。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全程售后保障，对您负责！",
+      "matched": "全程售后保障，对您负责！",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        12
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "假一赔十",
+      "matched": "假一赔十",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "过期不候！",
+      "matched": "过期不候！",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

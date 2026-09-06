@@ -1,0 +1,152 @@
+{
+  "sample_id": "13",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全新升级第7代|重塑防晒天花板",
+    "重塑防晒天花板",
+    "防晒红/黑/老",
+    "防晒增效+80.49%",
+    "连续5年销量NO1"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        12,
+        15
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        8,
+        15
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        9,
+        16
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        1,
+        12
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        1,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条；任务书示例「天花板」「连续5年销量NO1」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化断言加防晒效果描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全新升级第7代|重塑防晒天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        12,
+        15
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑防晒天花板",
+      "matched": "重塑防晒天花板",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        8,
+        15
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」「连续5年销量NO1」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒红/黑/老",
+      "matched": "防晒红/黑/老",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        9,
+        16
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」「连续5年销量NO1」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒增效+80.49%",
+      "matched": "防晒增效+80.49%",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        1,
+        12
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」「连续5年销量NO1」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "连续5年销量NO1",
+      "matched": "连续5年销量NO1",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        1,
+        7
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」「连续5年销量NO1」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

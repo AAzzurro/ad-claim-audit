@@ -23,6 +23,7 @@ data/detect/
 data/classify/
 data/eval/
 data/uploads/
+data/review_frames/
 data/*.jsonl
 data/*.json
 

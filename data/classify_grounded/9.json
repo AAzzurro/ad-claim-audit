@@ -1,0 +1,45 @@
+{
+  "sample_id": "9",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "天花板就选择头等舱，百万宝妈"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        16
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "天花板就选择头等舱，百万宝妈",
+      "matched": "天花板就选择头等舱，百万宝妈",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          2,
+          16
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播无明显风险，但画面中有多处绝对化描述和诱导消费信息。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"天花板就选择头等舱，百万宝妈\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"买4包送品15强1\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"买A包送消品15送1\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"买4包送端品15吨1\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；《广告法》第二十四条、第三十二条\"],\"explanation\":\"口播无明显风险，但画面中有多处绝对化描述和诱导消费信息。\"}"
+}

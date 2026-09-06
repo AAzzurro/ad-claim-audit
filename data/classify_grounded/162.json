@@ -1,0 +1,45 @@
+{
+  "sample_id": "162",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "可达0.4"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」「最佳」「全国第一」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "可达0.4",
+      "matched": "可达0.4",
+      "evidence_position": {
+        "source": "visual",
+        "time": 15.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」「最佳」「全国第一」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现「可达0.4」，属于绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"可达0.4\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」「最佳」「全国第一」\"],\"explanation\":\"画面中出现「可达0.4」，属于绝对化描述。\"}"
+}

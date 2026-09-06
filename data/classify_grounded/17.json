@@ -1,0 +1,70 @@
+{
+  "sample_id": "17",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全国包邮赠送",
+    "权成实测肌肤更紧·更弹·更亮"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        14
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全国包邮」「权威实测」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全国包邮赠送",
+      "matched": "全国包邮赠送",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全国包邮」「权威实测」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "权成实测肌肤更紧·更弹·更亮",
+      "matched": "权成实测肌肤更紧·更弹·更亮",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          14
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全国包邮」「权威实测」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化用语和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"全国包邮赠送\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"权成实测肌肤更紧·更弹·更亮\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全国包邮」「权威实测」\"],\"explanation\":\"画面中出现绝对化用语和功效断言。\"}"
+}

@@ -1,0 +1,154 @@
+{
+  "sample_id": "95",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "…给你们保价3年，保价3年，首次特价，不要399，全年最低价369，桌面上29件三个双全带走抢一号链接，一号…",
+    "剩30秒",
+    "全年最低价369",
+    "618抢先购",
+    "不要399，全部48小时内现货速发"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        50
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        4,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        53
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        7,
+        13
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        116,
+        133
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在诱导消费、存在其他线索 模型补上「存在其他线索」。 口播中有多处限时促销和价格误导，画面中也有引导站外导流的提示。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "…给你们保价3年，保价3年，首次特价，不要399，全年最低价369，桌面上29件三个双全带走抢一号链接，一号…",
+      "matched": "全年最低价",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        50
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "剩30秒",
+      "matched": "剩30秒",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        4,
+        8
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价369",
+      "matched": "全年最低价369",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        53
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "618抢先购",
+      "matched": "618抢先购",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        7,
+        13
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "不要399，全部48小时内现货速发",
+      "matched": "不要399，全部48小时内现货速发",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        116,
+        133
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

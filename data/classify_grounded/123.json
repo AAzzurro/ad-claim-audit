@@ -1,0 +1,39 @@
+{
+  "sample_id": "123",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [
+    "全网最低价"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全网最低价",
+      "matched": "全网最低价",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"库存不多\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"今天不要399\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"今天只要\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"全网最低价\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"拍下链接\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"口播中有多处限时促销和价格误导，画面中出现拍下链接。\"}"
+}

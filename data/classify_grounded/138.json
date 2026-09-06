@@ -1,0 +1,95 @@
+{
+  "sample_id": "138",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "纯净度更高",
+    "不饱和脂肪酸占比高，胆固醇相对较低",
+    "蛋香浓郁，无腥味，烹饪后风味突出"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        17
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        16
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「纯净度更高」「不饱和脂肪酸占比高」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "纯净度更高",
+      "matched": "纯净度更高",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「纯净度更高」「不饱和脂肪酸占比高」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "不饱和脂肪酸占比高，胆固醇相对较低",
+      "matched": "不饱和脂肪酸占比高，胆固醇相对较低",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          17
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「纯净度更高」「不饱和脂肪酸占比高」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "蛋香浓郁，无腥味，烹饪后风味突出",
+      "matched": "蛋香浓郁，无腥味，烹饪后风味突出",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          0,
+          16
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「纯净度更高」「不饱和脂肪酸占比高」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播未出现绝对化用语，但画面中多次出现对产品功效的断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"纯净度更高\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"不饱和脂肪酸占比高，胆固醇相对较低\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"蛋香浓郁，无腥味，烹饪后风味突出\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「纯净度更高」「不饱和脂肪酸占比高」\"],\"explanation\":\"口播未出现绝对化用语，但画面中多次出现对产品功效的断言。\"}"
+}

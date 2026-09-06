@@ -1,0 +1,55 @@
+{
+  "sample_id": "230",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "软黄金"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        5,
+        8
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条；任务书示例「软黄金」「行业天花板」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 软黄金和行业天花板为绝对化表述，100多单为诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "软黄金",
+      "matched": "软黄金",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        5,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「软黄金」「行业天花板」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

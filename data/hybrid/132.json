@@ -1,0 +1,106 @@
+{
+  "sample_id": "132",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "…你优惠20，加入会员可以再帮你优惠20，这已经是最低价了，脚底版价格了。好吧，钓友也就到手729吧。呃…",
+    "这已经是最低价了，脚底版价格了",
+    "式超越"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        76,
+        79
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        72,
+        87
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "《广告法》第九条、第十七条；任务书示例「行业天花板」「式超越」"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效」。 口播中提到最低价和最后几单，画面中有多处绝对化和功效断言。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "…你优惠20，加入会员可以再帮你优惠20，这已经是最低价了，脚底版价格了。好吧，钓友也就到手729吧。呃…",
+      "matched": "最低价",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        76,
+        79
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "这已经是最低价了，脚底版价格了",
+      "matched": "这已经是最低价了，脚底版价格了",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        72,
+        87
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「行业天花板」「式超越」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "式超越",
+      "matched": "式超越",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「行业天花板」「式超越」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

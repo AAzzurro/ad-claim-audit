@@ -1,0 +1,17 @@
+{
+  "sample_id": "219",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(3) 有条件描述不必然构成风险；口播无实质内容"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "口播为无意义重复音，画面文字为产品技术参数，无虚假宣传风险。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"正常\"],\"evidence\":[],\"rule_basis\":[\"任务书 9(3) 有条件描述不必然构成风险；口播无实质内容\"],\"explanation\":\"口播为无意义重复音，画面文字为产品技术参数，无虚假宣传风险。\"}"
+}

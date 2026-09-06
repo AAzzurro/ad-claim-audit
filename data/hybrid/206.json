@@ -1,0 +1,152 @@
+{
+  "sample_id": "206",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…营养粉镇海上市用科技定义新一代乳蛋白新标准，全球首创乳蛋白鲜萃提取科技，以三大创新突破，实现从新鲜生…",
+    "全球首创",
+    "全球首创",
+    "科技革命",
+    "国际领先低温分离技术"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        29,
+        31
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        126
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        3,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条；任务书示例「全球首创」「科技革命」「国际领先」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 首创、科技革命、国际领先均为绝对化表述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…营养粉镇海上市用科技定义新一代乳蛋白新标准，全球首创乳蛋白鲜萃提取科技，以三大创新突破，实现从新鲜生…",
+      "matched": "首创",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        29,
+        31
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球首创",
+      "matched": "首创",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球首创",
+      "matched": "全球首创",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「全球首创」「科技革命」「国际领先」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "科技革命",
+      "matched": "科技革命",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        126
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「全球首创」「科技革命」「国际领先」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "国际领先低温分离技术",
+      "matched": "国际领先低温分离技术",
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        3,
+        7
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「全球首创」「科技革命」「国际领先」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

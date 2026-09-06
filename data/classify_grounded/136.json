@@ -1,0 +1,114 @@
+{
+  "sample_id": "136",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业天花板",
+    "0乳糖",
+    "0元送",
+    "1.6亿罐"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        3
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        3
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业天花板",
+      "matched": "行业天花板",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "0乳糖",
+      "matched": "0乳糖",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          3
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "0元送",
+      "matched": "0元送",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          3
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "1.6亿罐",
+      "matched": "1.6亿罐",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化用语和夸大功效描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"行业天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"0乳糖\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"0元送\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"1.6亿罐\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化用语、医疗/药品用语、保健食品涉及疾病治疗预防；任务书示例「行业天花板」「0乳糖」「0元送」「1.6亿罐」\"],\"explanation\":\"画面中出现绝对化用语和夸大功效描述。\"}"
+}

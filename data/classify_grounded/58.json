@@ -1,0 +1,17 @@
+{
+  "sample_id": "58",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在其他线索\"],\"evidence\":[{\"label\":\"存在其他线索\",\"text\":\"DeepSeek 极长深温思考，全间度索，暂能问\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"鲁小班24小时待命\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"AI健康智能体\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(4) 以迷信好运、转运推销归入其他线索\"],\"explanation\":\"口播内容无明确功效断言或收益保证，但画面中出现的DeepSeek、鲁小班等具有神秘色彩的描述可能涉及迷信或运气。\"}"
+}

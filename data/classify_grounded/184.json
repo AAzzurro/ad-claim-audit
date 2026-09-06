@@ -1,0 +1,96 @@
+{
+  "sample_id": "184",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "过期不候！",
+    "国际进口博览会同款",
+    "5.00会会会会会超过98%的同行业所税店"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "过期不候！",
+      "matched": "过期不候！",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "国际进口博览会同款",
+      "matched": "国际进口博览会同款",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "5.00会会会会会超过98%的同行业所税店",
+      "matched": "5.00会会会会会超过98%的同行业所税店",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "画面中出现诱导消费的限时促销信息和夸大功效的绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"买1套送1套\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"过期不候！\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"国际进口博览会同款\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"5.00会会会会会超过98%的同行业所税店\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效\"],\"explanation\":\"画面中出现诱导消费的限时促销信息和夸大功效的绝对化描述。\"}"
+}

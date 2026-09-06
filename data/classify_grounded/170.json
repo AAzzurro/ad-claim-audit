@@ -1,0 +1,83 @@
+{
+  "sample_id": "170",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业天花板",
+    "非常非常好",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        52,
+        57
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「非常非常好」；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业天花板",
+      "matched": "行业天花板",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「非常非常好」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "非常非常好",
+      "matched": "非常非常好",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          52,
+          57
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「非常非常好」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「非常非常好」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化用语和功效断言，画面中出现最后几单，构成诱导消费。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\n  \"risk_labels\": [\"存在夸大功效\", \"存在诱导消费\"],\n  \"evidence\": [\n    {\"label\": \"存在夸大功效\", \"text\": \"行业天花板\", \"source\": \"visual\"},\n    {\"label\": \"存在夸大功效\", \"text\": \"非常非常好\", \"source\": \"audio\"},\n    {\"label\": \"存在诱导消费\", \"text\": \"最后几单\", \"source\": \"visual\"}\n  ],\n  \"rule_basis\": [\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「非常非常好」；《直播电商监督管理办法》第三十二条\"],\n  \"explanation\": \"口播中出现绝对化用语和功效断言，画面中出现最后几单，构成诱导消费。\"\n}"
+}

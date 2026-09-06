@@ -1,0 +1,67 @@
+{
+  "sample_id": "182",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "20倍吸收率",
+    "20倍修复效率提升"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "engine": "model"
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中提到20倍修复效率提升，画面中出现20倍吸收率，均属绝对化描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "20倍吸收率",
+      "matched": "20倍吸收率",
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "20倍修复效率提升",
+      "matched": "20倍修复效率提升",
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

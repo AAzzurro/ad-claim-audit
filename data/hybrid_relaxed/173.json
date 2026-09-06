@@ -1,0 +1,79 @@
+{
+  "sample_id": "173",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "1.6亿罐",
+    "上市即热销"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 数据夸大和市场表现断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "1.6亿罐",
+      "matched": "1.6亿罐",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "上市即热销",
+      "matched": "上市即热销",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "《广告法》第十六条：不得使用数据、统计资料、调查结果、文摘、引用语等不真实、不准确的内容作证明材料；任务书示例「1.6亿罐」「上市即热销」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

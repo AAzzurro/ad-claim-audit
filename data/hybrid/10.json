@@ -1,0 +1,81 @@
+{
+  "sample_id": "10",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "天花板就选择头等舱百万宝妈种",
+    "活动就一天！抓紧"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        16
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第十六条；任务书示例「活动就一天」「全网热销」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在诱导消费 规则补上「存在夸大功效」；模型补上「存在诱导消费」。 限时活动加虚构热销。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "天花板就选择头等舱百万宝妈种",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "活动就一天！抓紧",
+      "matched": "活动就一天！抓紧",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        16
+      ],
+      "rule_basis": "《广告法》第十六条；任务书示例「活动就一天」「全网热销」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    }
+  }
+}

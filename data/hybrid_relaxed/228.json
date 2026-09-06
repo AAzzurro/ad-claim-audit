@@ -1,0 +1,104 @@
+{
+  "sample_id": "228",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "性价比天花板... 展开",
+    "性价比天花板",
+    "硬度特别硬，密度特别高"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        3,
+        6
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        59,
+        70
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播中出现绝对化描述和具体功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "性价比天花板... 展开",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        3,
+        6
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "性价比天花板",
+      "matched": "性价比天花板",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "硬度特别硬，密度特别高",
+      "matched": "硬度特别硬，密度特别高",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        59,
+        70
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

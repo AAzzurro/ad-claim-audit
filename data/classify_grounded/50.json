@@ -1,0 +1,45 @@
+{
+  "sample_id": "50",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全年最低价"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        100,
+        105
+      ]
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 限时稀缺与价格误导归入诱导消费；9(4) 其他虚假宣传归入其他线索"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价",
+      "matched": "全年最低价",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          100,
+          105
+        ]
+      },
+      "rule_basis": "任务书 9(2) 限时稀缺与价格误导归入诱导消费；9(4) 其他虚假宣传归入其他线索",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中提到全年最低价和限时活动，画面中也有相关提示，同时存在免费使用但未明确效果因人而异的情况。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年最低价\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"右上这个券到10点完就没了\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"免费使用\",\"source\":\"audio\"}],\"rule_basis\":[\"任务书 9(2) 限时稀缺与价格误导归入诱导消费；9(4) 其他虚假宣传归入其他线索\"],\"explanation\":\"口播中提到全年最低价和限时活动，画面中也有相关提示，同时存在免费使用但未明确效果因人而异的情况。\"}"
+}

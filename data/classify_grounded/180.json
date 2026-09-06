@@ -1,0 +1,77 @@
+{
+  "sample_id": "180",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [
+    "行业天花板",
+    "最强祛痘速翘红敏肌祛痘更稳定",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；任务书示例「行业天花板」「最强祛痘」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业天花板",
+      "matched": "行业天花板",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；任务书示例「行业天花板」「最强祛痘」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "最强祛痘速翘红敏肌祛痘更稳定",
+      "matched": "最强祛痘速翘红敏肌祛痘更稳定",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；任务书示例「行业天花板」「最强祛痘」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；任务书示例「行业天花板」「最强祛痘」",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"行业天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"最强祛痘速翘红敏肌祛痘更稳定\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费；任务书示例「行业天花板」「最强祛痘」\"],\"explanation\":\"画面中出现绝对化用语和夸大功效描述，同时存在限时促销提示。\"}"
+}

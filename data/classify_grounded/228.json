@@ -1,0 +1,70 @@
+{
+  "sample_id": "228",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "性价比天花板",
+    "硬度特别硬，密度特别高"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        6
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        59,
+        70
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "性价比天花板",
+      "matched": "性价比天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "硬度特别硬，密度特别高",
+      "matched": "硬度特别硬，密度特别高",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          59,
+          70
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化描述和具体功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"性价比天花板\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"硬度特别硬，密度特别高\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「硬度特别硬」「密度特别高」\"],\"explanation\":\"口播中出现绝对化描述和具体功效断言。\"}"
+}

@@ -1,0 +1,45 @@
+{
+  "sample_id": "227",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "百香果界的天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 54.0,
+      "span": [
+        0,
+        8
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "百香果界的天花板",
+      "matched": "百香果界的天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 54.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中未出现绝对化描述，但画面中出现了「百香果界的天花板」。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"百香果界的天花板\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」\"],\"explanation\":\"口播中未出现绝对化描述，但画面中出现了「百香果界的天花板」。\"}"
+}

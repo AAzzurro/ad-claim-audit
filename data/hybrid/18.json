@@ -1,0 +1,104 @@
+{
+  "sample_id": "18",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "…材，一定要我选黑色。身材匀称，选白色。对，全都是最低价了，这个上衣肚大必须给你穿。宝贝儿，我跟你讲，我…",
+    "最低价了是吧珊珊",
+    "全都是最低价了"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        64,
+        67
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        61,
+        68
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "《广告法》第十六条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在诱导消费 诱导消费通过最低价和立即抢购提示，站外导流通过去使用链接。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "…材，一定要我选黑色。身材匀称，选白色。对，全都是最低价了，这个上衣肚大必须给你穿。宝贝儿，我跟你讲，我…",
+      "matched": "最低价",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        64,
+        67
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最低价了是吧珊珊",
+      "matched": "最低价",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "全都是最低价了",
+      "matched": "全都是最低价了",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        61,
+        68
+      ],
+      "rule_basis": "《广告法》第十六条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    }
+  }
+}

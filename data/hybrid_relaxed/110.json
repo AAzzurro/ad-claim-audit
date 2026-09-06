@@ -1,0 +1,103 @@
+{
+  "sample_id": "110",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "改善肌肤8大问题",
+    "全球自研环六肽首创者",
+    "提升胶原来弹链接细理毛孔修复舒缓美白祛斑"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        5,
+        13
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        121,
+        141
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「全球自研环六肽首创者」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播和画面中多次出现功效断言和绝对化描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善肌肤8大问题",
+      "matched": "改善肌肤8大问题",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        5,
+        13
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「全球自研环六肽首创者」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球自研环六肽首创者",
+      "matched": "全球自研环六肽首创者",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「全球自研环六肽首创者」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "提升胶原来弹链接细理毛孔修复舒缓美白祛斑",
+      "matched": "提升胶原来弹链接细理毛孔修复舒缓美白祛斑",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        121,
+        141
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「全球自研环六肽首创者」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

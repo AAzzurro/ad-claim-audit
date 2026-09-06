@@ -1,0 +1,58 @@
+{
+  "sample_id": "104",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [
+    "全年最低价",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价",
+      "matched": "全年最低价",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年最低价\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"520送女友\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时稀缺与价格误导归入诱导消费；任务书示例「全年最低价」「最后几单」；其他线索归入其他\"],\"explanation\":\"全年最低价和最后几单构成诱导消费，520送女友构成其他线索。\"}"
+}

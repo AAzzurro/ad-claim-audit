@@ -1,0 +1,45 @@
+{
+  "sample_id": "191",
+  "risk_labels": [
+    "存在其他线索"
+  ],
+  "evidence": [
+    "带来好运"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        37,
+        41
+      ]
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "带来好运",
+      "matched": "带来好运",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          37,
+          41
+        ]
+      },
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中多次提及紫色饰品和衣服能带来好运，属于迷信运气承诺。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在其他线索\"],\"evidence\":[{\"label\":\"存在其他线索\",\"text\":\"带来好运\",\"source\":\"audio\"}],\"rule_basis\":[\"任务书 9(4) 以迷信好运、转运推销归入其他线索\"],\"explanation\":\"口播中多次提及紫色饰品和衣服能带来好运，属于迷信运气承诺。\"}"
+}

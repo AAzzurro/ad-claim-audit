@@ -1,0 +1,129 @@
+{
+  "sample_id": "52",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+    "最后降架了",
+    "520礼造季 618年中狂",
+    "就买红童腰大礼 紧数TOP1 抗皱TOP1 成分功效护肤店铺榜 保湿TOP1 成分TOP1 回购TOP1 品牌护肤宫装好评榜 紧致TOP1 RERASES 品牌护肤营装好评榜 ARECEMLERAN 高端焕跟修护榜 exa LANT KONCE IS 欢效水E痛纹榜 品牌护肤套装好评机 敬形肌护理神店棉门 MIFFE 质优惠 尺抛 到手7件 韩束红童腰礼盒"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        112,
+        146
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        61,
+        66
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        7
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 口播中出现绝对化功效断言，画面中多次出现限时促销信息。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+      "matched": "整个平台上咱们抗皱蛋白补水提亮舒缓保湿我们女人要的10个效果都是第一",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        112,
+        146
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后降架了",
+      "matched": "最后降架了",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        61,
+        66
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "520礼造季 618年中狂",
+      "matched": "520礼造季 618年中狂",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        7
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "就买红童腰大礼 紧数TOP1 抗皱TOP1 成分功效护肤店铺榜 保湿TOP1 成分TOP1 回购TOP1 品牌护肤宫装好评榜 紧致TOP1 RERASES 品牌护肤营装好评榜 ARECEMLERAN 高端焕跟修护榜 exa LANT KONCE IS 欢效水E痛纹榜 品牌护肤套装好评机 敬形肌护理神店棉门 MIFFE 质优惠 尺抛 到手7件 韩束红童腰礼盒",
+      "matched": "就买红童腰大礼 紧数TOP1 抗皱TOP1 成分功效护肤店铺榜 保湿TOP1 成分TOP1 回购TOP1 品牌护肤宫装好评榜 紧致TOP1 RERASES 品牌护肤营装好评榜 ARECEMLERAN 高端焕跟修护榜 exa LANT KONCE IS 欢效水E痛纹榜 品牌护肤套装好评机 敬形肌护理神店棉门 MIFFE 质优惠 尺抛 到手7件 韩束红童腰礼盒",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「行业天花板」「全国第一」「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

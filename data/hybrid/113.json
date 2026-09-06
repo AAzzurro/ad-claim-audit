@@ -1,0 +1,128 @@
+{
+  "sample_id": "113",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "首创者",
+    "全球自研环六肽",
+    "618红蛮腰一价封神",
+    "连续3年护肤套装"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        2
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、第十七条、第十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 诱导消费、虚假收益承诺、夸大功效。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "首创者",
+      "matched": "首创",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        2
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球自研环六肽",
+      "matched": "全球自研环六肽",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、第十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "618红蛮腰一价封神",
+      "matched": "618红蛮腰一价封神",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、第十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "连续3年护肤套装",
+      "matched": "连续3年护肤套装",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、第十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

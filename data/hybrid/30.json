@@ -1,0 +1,56 @@
+{
+  "sample_id": "30",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业首创一体三娘间"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "任务书 9(3)；无风险原文"
+  ],
+  "explanation": "规则命中：存在夸大功效 规则补上「存在夸大功效」。 口播和画面均为正常介绍和常规优惠信息。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业首创一体三娘间",
+      "matched": "首创",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

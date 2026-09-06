@@ -1,0 +1,131 @@
+{
+  "sample_id": "10",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费",
+    "存在站外导流风险线索"
+  ],
+  "evidence": [
+    "天花板就选择头等舱百万宝妈种",
+    "活动就一天！抓紧",
+    "买4包送品15油）",
+    "拍1发4包"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        16
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        6
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在诱导消费、存在站外导流风险线索 规则补上「存在夸大功效」；模型补上「存在诱导消费、存在站外导流风险线索」。 画面中多次出现限时活动和诱导消费信息，且有站外导流风险。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "天花板就选择头等舱百万宝妈种",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "活动就一天！抓紧",
+      "matched": "活动就一天！抓紧",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        16
+      ],
+      "rule_basis": "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "买4包送品15油）",
+      "matched": "买4包送品15油）",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在站外导流风险线索",
+      "evidence": "拍1发4包",
+      "matched": "拍1发4包",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        6
+      ],
+      "rule_basis": "任务书 9(2) 限时稀缺与诱导消费；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在站外导流风险线索"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "sample_id": "127",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全年最多全年最低价"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        87,
+        96
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十五条"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最多全年最低价",
+      "matched": "全年最多全年最低价",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          87,
+          96
+        ]
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十五条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现全年最低价和额外多送，构成诱导消费。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年最多全年最低价\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"额外多送\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十五条\"],\"explanation\":\"画面中出现全年最低价和额外多送，构成诱导消费。\"}"
+}

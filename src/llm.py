@@ -60,7 +60,8 @@ def chat_json(
     model: str = DEFAULT_MODEL,
     host: str = DEFAULT_HOST,
     temperature: float = 0.0,
-    num_ctx: int = 4096,
+    num_ctx: int = 8192,
+    num_predict: int = 512,
     timeout: float = 180.0,
 ) -> str:
     payload = {
@@ -72,7 +73,7 @@ def chat_json(
         "options": {
             "temperature": temperature,
             "num_ctx": num_ctx,
-            "num_predict": 512,
+            "num_predict": num_predict,
         },
     }
     body = _request_json(f"{host.rstrip('/')}/api/chat", payload, timeout=timeout)

@@ -1,0 +1,39 @@
+{
+  "sample_id": "159",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [
+    "全国第一"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全国第一",
+      "matched": "全国第一",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"全国第一\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"立即抢购\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化用语归入夸大功效；限时促销归入诱导消费。风险常在画面叠字\"],\"explanation\":\"画面中出现「全国第一」，口播中提及「立即抢购」。\"}"
+}

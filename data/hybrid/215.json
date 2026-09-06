@@ -1,0 +1,104 @@
+{
+  "sample_id": "215",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "护肤界的天花板！618年中大促福利多多超",
+    "护肤界的天花板！",
+    "价值3,000多的美容仪"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        12
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化用语加高价值产品断言，诱导消费行为。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "护肤界的天花板！618年中大促福利多多超",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "护肤界的天花板！",
+      "matched": "护肤界的天花板！",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "价值3,000多的美容仪",
+      "matched": "价值3,000多的美容仪",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        12
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

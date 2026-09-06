@@ -1,0 +1,80 @@
+{
+  "sample_id": "147",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "你最好看",
+    "首以您看一号链接哈"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        1,
+        3
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        71,
+        80
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 绝对化断言、诱导消费、站外导流。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "你最好看",
+      "matched": "最好",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        1,
+        3
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "首以您看一号链接哈",
+      "matched": "首以您看一号链接哈",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        71,
+        80
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

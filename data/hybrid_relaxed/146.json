@@ -1,0 +1,130 @@
+{
+  "sample_id": "146",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "主食罐头天花板",
+    "主食罐头天花板",
+    "显著排毛",
+    "限时买3送4"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        160,
+        164
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在诱导消费 模型补上「存在诱导消费」。 画面中出现绝对化用语和显著排毛效果断言，同时有限时促销信息。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "主食罐头天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "主食罐头天花板",
+      "matched": "主食罐头天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "显著排毛",
+      "matched": "显著排毛",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        160,
+        164
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "限时买3送4",
+      "matched": "限时买3送4",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        7
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

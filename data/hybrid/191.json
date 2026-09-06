@@ -1,0 +1,55 @@
+{
+  "sample_id": "191",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在其他线索"
+  ],
+  "evidence": [
+    "紫气东来、紫禁城、紫微星、紫气代表着尊贵和好运"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(4)"
+  ],
+  "explanation": "模型命中：存在其他线索 模型补上「存在其他线索」。 画面叠字涉及迷信好运。",
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "紫气东来、紫禁城、紫微星、紫气代表着尊贵和好运",
+      "matched": "紫气东来、紫禁城、紫微星、紫气代表着尊贵和好运",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "任务书 9(4)",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在其他线索"
+      ]
+    }
+  }
+}

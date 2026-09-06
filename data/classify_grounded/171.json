@@ -1,0 +1,45 @@
+{
+  "sample_id": "171",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "国家蓝茂认证去黄褐斑"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        32,
+        42
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：医疗、药品、保健食品广告不得含有断言功效、安全性的断言或保证；任务书示例「国家蓝茂认证」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "国家蓝茂认证去黄褐斑",
+      "matched": "国家蓝茂认证去黄褐斑",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          32,
+          42
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：医疗、药品、保健食品广告不得含有断言功效、安全性的断言或保证；任务书示例「国家蓝茂认证」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现「国家蓝茂认证去黄褐斑」，属于功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"国家蓝茂认证去黄褐斑\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条：医疗、药品、保健食品广告不得含有断言功效、安全性的断言或保证；任务书示例「国家蓝茂认证」\"],\"explanation\":\"画面中出现「国家蓝茂认证去黄褐斑」，属于功效断言。\"}"
+}

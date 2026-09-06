@@ -1,0 +1,56 @@
+{
+  "sample_id": "139",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…题在开始，学习路上不用两闷头器干，老师来帮你探参最佳学习方法，发现学习的乐路！"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        37,
+        39
+      ],
+      "engine": "rules"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+    "风险常在画面叠字"
+  ],
+  "explanation": "规则命中：存在夸大功效 规则补上「存在夸大功效」。 模型给出的风险缺少合格原文证据，按正常处理。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…题在开始，学习路上不用两闷头器干，老师来帮你探参最佳学习方法，发现学习的乐路！",
+      "matched": "最佳",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        37,
+        39
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项：不得使用「国家级」「最高级」「最佳」等用语",
+      "hedged": false,
+      "engine": "rules"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

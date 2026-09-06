@@ -1,0 +1,55 @@
+{
+  "sample_id": "233",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "最强"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        3
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条；任务书示例「最强」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 画面叠字中出现绝对化用语。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "最强",
+      "matched": "最强",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        1,
+        3
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「最强」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

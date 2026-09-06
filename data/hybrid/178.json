@@ -1,0 +1,103 @@
+{
+  "sample_id": "178",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "独家专利技术",
+    "超分子苦参碱省酸研",
+    "超分子分子毕菌强"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        51
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        52,
+        61
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        86,
+        94
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 独家专利技术和超分子技术为绝对化表述，超分子分子毕菌强为功效断言。最后几单为诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "独家专利技术",
+      "matched": "独家专利技术",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        51
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "超分子苦参碱省酸研",
+      "matched": "超分子苦参碱省酸研",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        52,
+        61
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "超分子分子毕菌强",
+      "matched": "超分子分子毕菌强",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        86,
+        94
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

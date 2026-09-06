@@ -1,0 +1,45 @@
+{
+  "sample_id": "217",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "舒适度天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「舒适度天花板」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "舒适度天花板",
+      "matched": "舒适度天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「舒适度天花板」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现「舒适度天花板」，属于绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"舒适度天花板\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「舒适度天花板」\"],\"explanation\":\"画面中出现「舒适度天花板」，属于绝对化描述。\"}"
+}

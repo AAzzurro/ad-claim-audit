@@ -1,0 +1,55 @@
+{
+  "sample_id": "198",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "真的会让男人念念不忘，被窝都带香味儿，一走过别人都能闻到，就是自带体香"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        0,
+        35
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中存在绝对化用语和功效断言，以及诱导消费的宣传。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "真的会让男人念念不忘，被窝都带香味儿，一走过别人都能闻到，就是自带体香",
+      "matched": "真的会让男人念念不忘，被窝都带香味儿，一走过别人都能闻到，就是自带体香",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        0,
+        35
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

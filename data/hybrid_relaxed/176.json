@@ -1,0 +1,103 @@
+{
+  "sample_id": "176",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "真正透皮吸收",
+    "6.08倍累计渗透量",
+    "比传统单体水杨酸更渗透"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条；任务书示例「真正透皮吸收」「6.08倍渗透量」「更渗透」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 画面中出现具体功效断言，如「真正透皮吸收」和「6.08倍渗透量」。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "真正透皮吸收",
+      "matched": "真正透皮吸收",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "《广告法》第十六条；任务书示例「真正透皮吸收」「6.08倍渗透量」「更渗透」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "6.08倍累计渗透量",
+      "matched": "6.08倍累计渗透量",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "《广告法》第十六条；任务书示例「真正透皮吸收」「6.08倍渗透量」「更渗透」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "比传统单体水杨酸更渗透",
+      "matched": "比传统单体水杨酸更渗透",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第十六条；任务书示例「真正透皮吸收」「6.08倍渗透量」「更渗透」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sample_id": "1",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费和站外导流；《广告法》第二十五条"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"2号链接你拍下了，宝宝\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"最高领取20元\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费和站外导流；《广告法》第二十五条\"],\"explanation\":\"口播中有诱导消费行为，画面中出现最高领取优惠构成其他线索。\"}"
+}

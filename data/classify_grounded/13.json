@@ -1,0 +1,120 @@
+{
+  "sample_id": "13",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "防晒黑",
+    "防晒增效+80.49%",
+    "防晒剂至多-26.09%",
+    "重塑防晒天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        15,
+        18
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        1,
+        12
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        1,
+        13
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        8,
+        15
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒黑",
+      "matched": "防晒黑",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          15,
+          18
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒增效+80.49%",
+      "matched": "防晒增效+80.49%",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          1,
+          12
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "防晒剂至多-26.09%",
+      "matched": "防晒剂至多-26.09%",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          1,
+          13
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "重塑防晒天花板",
+      "matched": "重塑防晒天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 21.0,
+        "span": [
+          8,
+          15
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "画面中多次出现绝对化和功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"防晒黑\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒增效+80.49%\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"防晒剂至多-26.09%\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"重塑防晒天花板\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「防晒黑」「防晒增效」「重塑防晒天花板」\"],\"explanation\":\"画面中多次出现绝对化和功效断言。\"}"
+}

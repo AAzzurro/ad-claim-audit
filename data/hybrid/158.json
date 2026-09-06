@@ -1,0 +1,55 @@
+{
+  "sample_id": "158",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "修复我们这个粘膜这个损伤黏膜这个健康的"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        170,
+        189
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条；任务书示例「修复粘膜」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 断言修复粘膜，属于夸大功效。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "修复我们这个粘膜这个损伤黏膜这个健康的",
+      "matched": "修复我们这个粘膜这个损伤黏膜这个健康的",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        170,
+        189
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「修复粘膜」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

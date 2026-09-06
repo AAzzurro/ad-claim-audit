@@ -1,0 +1,70 @@
+{
+  "sample_id": "22",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "色域天花板",
+    "行业唯一"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「色域天花板」「行业唯一」；《直播电商监督管理办法》第三十二条诱导消费；其他线索示例「至高赢世界杯门票」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "色域天花板",
+      "matched": "色域天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「色域天花板」「行业唯一」；《直播电商监督管理办法》第三十二条诱导消费；其他线索示例「至高赢世界杯门票」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业唯一",
+      "matched": "行业唯一",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「色域天花板」「行业唯一」；《直播电商监督管理办法》第三十二条诱导消费；其他线索示例「至高赢世界杯门票」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化描述和功效断言，同时有诱导消费和站外导流风险。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\n  \"risk_labels\": [\"存在夸大功效\", \"存在诱导消费\", \"存在其他线索\"],\n  \"evidence\": [\n    {\"label\": \"存在夸大功效\", \"text\": \"色域天花板\", \"source\": \"visual\"},\n    {\"label\": \"存在夸大功效\", \"text\": \"行业唯一\", \"source\": \"visual\"},\n    {\"label\": \"存在诱导消费\", \"text\": \"至高直世界杯门票\", \"source\": \"visual\"},\n    {\"label\": \"存在其他线索\", \"text\": \"至高赢世界杯门票\", \"source\": \"visual\"}\n  ],\n  \"rule_basis\": [\"《广告法》第十六条功效断言；任务书示例「色域天花板」「行业唯一」；《直播电商监督管理办法》第三十二条诱导消费；其他线索示例「至高赢世界杯门票」\"],\n  \"explanation\": \"画面中出现绝对化描述和功效断言，同时有诱导消费和站外导流风险。\"\n}"
+}

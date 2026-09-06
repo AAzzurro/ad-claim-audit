@@ -1,0 +1,17 @@
+{
+  "sample_id": "99",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(3) 有条件描述不必然构成风险；常规促销信息不构成虚假宣传"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "口播和画面主要为促销信息和产品介绍，未见绝对化描述或虚假收益承诺。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"正常\"],\"evidence\":[],\"rule_basis\":[\"任务书 9(3) 有条件描述不必然构成风险；常规促销信息不构成虚假宣传\"],\"explanation\":\"口播和画面主要为促销信息和产品介绍，未见绝对化描述或虚假收益承诺。\"}"
+}

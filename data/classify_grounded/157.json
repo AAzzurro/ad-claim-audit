@@ -1,0 +1,145 @@
+{
+  "sample_id": "157",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "28天改善皮肤质量",
+    "皮肤黑色素含量",
+    "皮肤含水量",
+    "皮肤光泽度",
+    "眼角皮肤弹性R2"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        9
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        7
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        8
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "28天改善皮肤质量",
+      "matched": "28天改善皮肤质量",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "皮肤黑色素含量",
+      "matched": "皮肤黑色素含量",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "皮肤含水量",
+      "matched": "皮肤含水量",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "皮肤光泽度",
+      "matched": "皮肤光泽度",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "眼角皮肤弹性R2",
+      "matched": "眼角皮肤弹性R2",
+      "evidence_position": {
+        "source": "visual",
+        "time": 27.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "explanation": "口播中多次提及具体皮肤改善指标，属于功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"28天改善皮肤质量\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"皮肤黑色素含量\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"皮肤含水量\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"皮肤光泽度\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"眼角皮肤弹性R2\",\"source\":\"audio\"}],\"rule_basis\":[\"《广告法》第十六条：不得断言产品具有特定功效；任务书示例「28天改善皮肤质量」\"],\"explanation\":\"口播中多次提及具体皮肤改善指标，属于功效断言。\"}"
+}

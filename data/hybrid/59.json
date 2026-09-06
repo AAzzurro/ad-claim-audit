@@ -1,0 +1,80 @@
+{
+  "sample_id": "59",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…活，多个AI观影智能体，百万剧集，模糊搜索，行业首个AI服务智能体。",
+    "行业首个AI服务智能体"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        120,
+        122
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "任务书 9(3)；无绝对化、虚假收益承诺、诱导消费等风险"
+  ],
+  "explanation": "规则命中：存在夸大功效 规则补上「存在夸大功效」。 口播为产品功能介绍，画面为品牌和产品信息展示，无明显风险。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…活，多个AI观影智能体，百万剧集，模糊搜索，行业首个AI服务智能体。",
+      "matched": "首个",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        120,
+        122
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业首个AI服务智能体",
+      "matched": "首个",
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

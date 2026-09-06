@@ -1,0 +1,79 @@
+{
+  "sample_id": "112",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "改善肌肤8大问题",
+    "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        5,
+        13
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 画面和口播中多次出现绝对化描述和功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善肌肤8大问题",
+      "matched": "改善肌肤8大问题",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        5,
+        13
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑",
+      "matched": "抗皱紧致、提升胶原、提亮肌肤、修护舒缓、美白祛斑",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「改善肌肤8大问题」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

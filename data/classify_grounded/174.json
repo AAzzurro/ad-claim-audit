@@ -1,0 +1,70 @@
+{
+  "sample_id": "174",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "改善肌肤8大问题",
+    "14天紧致淡纹提亮"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「14天紧致淡纹提亮」；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善肌肤8大问题",
+      "matched": "改善肌肤8大问题",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「14天紧致淡纹提亮」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天紧致淡纹提亮",
+      "matched": "14天紧致淡纹提亮",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「14天紧致淡纹提亮」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "口播中有多次催单行为，并且画面中出现了多项功效断言。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"改善肌肤8大问题\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"14天紧致淡纹提亮\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"4单宝贝们，你信我就拍，不信我就不要拍。因为咱们下午来，包括你母亲节当天来买只有7件\",\"source\":\"audio\"}],\"rule_basis\":[\"《广告法》第十六条功效断言；任务书示例「改善肌肤8大问题」「14天紧致淡纹提亮」；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"口播中有多次催单行为，并且画面中出现了多项功效断言。\"}"
+}

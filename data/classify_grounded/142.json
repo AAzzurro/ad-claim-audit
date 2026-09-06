@@ -1,0 +1,45 @@
+{
+  "sample_id": "142",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "NO1全国第一"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "NO1全国第一",
+      "matched": "NO1全国第一",
+      "evidence_position": {
+        "source": "visual",
+        "time": 15.0,
+        "span": [
+          0,
+          7
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播未出现明确功效断言，但画面中出现「全国第一」，构成绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"NO1全国第一\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」\"],\"explanation\":\"口播未出现明确功效断言，但画面中出现「全国第一」，构成绝对化描述。\"}"
+}

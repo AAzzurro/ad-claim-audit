@@ -1,0 +1,56 @@
+{
+  "sample_id": "51",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "首创者"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        2
+      ],
+      "engine": "rules"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、十七条、十八条；任务书示例「首抗皱紧致」「多送」"
+  ],
+  "explanation": "规则命中：存在夸大功效 规则补上「存在夸大功效」。 模型给出的风险缺少合格原文证据，按正常处理。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "首创者",
+      "matched": "首创",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        2
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

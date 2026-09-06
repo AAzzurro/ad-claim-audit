@@ -1,0 +1,106 @@
+{
+  "sample_id": "234",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "今年最后一场清版全网最低价#GG潮牌#",
+    "全网最低价错过等明年",
+    "二年一次错过等明年！"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        13
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        13
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效」。 画面中出现全网最低价和限时促销，同时有绝对化描述。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "今年最后一场清版全网最低价#GG潮牌#",
+      "matched": "全网最低价",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        13
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "全网最低价错过等明年",
+      "matched": "全网最低价错过等明年",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        8,
+        13
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "二年一次错过等明年！",
+      "matched": "二年一次错过等明年！",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

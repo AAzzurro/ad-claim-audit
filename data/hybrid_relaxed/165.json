@@ -1,0 +1,106 @@
+{
+  "sample_id": "165",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "食品不是药物，不超代替药物治疗疾病，",
+    "有助于控制体内脂肪",
+    "治疗发院"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        9,
+        13
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+    "《广告法》第十六条、第二十八条；任务书示例「治疗发院」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效、存在其他线索 模型补上「存在其他线索」。 口播未见明显风险，但画面出现「治疗发院」，属于夸大功效。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "食品不是药物，不超代替药物治疗疾病，",
+      "matched": "代替药物",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        9,
+        13
+      ],
+      "rule_basis": "《广告法》第十七条：禁止其他广告涉及疾病治疗功能或使用医疗用语；第十八条保健食品不得涉及疾病预防治疗",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "有助于控制体内脂肪",
+      "matched": "有助于控制体内脂肪",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「治疗发院」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "治疗发院",
+      "matched": "治疗发院",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「治疗发院」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在其他线索"
+      ]
+    }
+  }
+}

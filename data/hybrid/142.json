@@ -1,0 +1,129 @@
+{
+  "sample_id": "142",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "…效果。这个是我们家的一号链接新增的一号链接行业内首创超能暴风洗，帮你去增大强力模式情况下的话，大概使…",
+    "NO1全国第一",
+    "石头首创",
+    "NO1全国第一"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        115,
+        117
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        3,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        2,
+        4
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项「等」：与「最高级/最佳」同类的第一、唯一表述",
+    "《广告法》第九条、第十七条；任务书示例「全国第一」「首发直降」「限时破价」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 全国第一为绝对化，首发直降和限时破价为诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "…效果。这个是我们家的一号链接新增的一号链接行业内首创超能暴风洗，帮你去增大强力模式情况下的话，大概使…",
+      "matched": "首创",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        115,
+        117
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "NO1全国第一",
+      "matched": "全国第一",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        3,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」；《广告法》第九条第三项「等」：与「最高级/最佳」同类的第一、唯一表述",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "石头首创",
+      "matched": "首创",
+      "source": "visual",
+      "time": 18.0,
+      "span": [
+        2,
+        4
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "NO1全国第一",
+      "matched": "NO1全国第一",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「全国第一」「首发直降」「限时破价」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "sample_id": "165",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "有助于控制体内脂肪"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条、第二十八条；任务书示例「治疗发院」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "有助于控制体内脂肪",
+      "matched": "有助于控制体内脂肪",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「治疗发院」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播未见明显风险，但画面出现「治疗发院」，属于夸大功效。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"有助于控制体内脂肪\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"治疗发院\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条、第二十八条；任务书示例「治疗发院」\"],\"explanation\":\"口播未见明显风险，但画面出现「治疗发院」，属于夸大功效。\"}"
+}

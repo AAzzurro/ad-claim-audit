@@ -1,0 +1,17 @@
+{
+  "sample_id": "94",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费常见表述；其他线索示例送礼"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"今天只\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"399\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"48小时内现货速发\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"送妈妈\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"送小姨\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"送自己\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"送婆婆\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"送外婆\",\"source\":\"audio\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费常见表述；其他线索示例送礼\"],\"explanation\":\"口播中有多处诱导消费和送礼信息。\"}"
+}

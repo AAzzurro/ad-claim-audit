@@ -1,0 +1,55 @@
+{
+  "sample_id": "15",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "可以放心去拍下"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        22,
+        29
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；任务书示例"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 绝对化断言、诱导消费、虚假收益承诺。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "可以放心去拍下",
+      "matched": "可以放心去拍下",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        22,
+        29
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

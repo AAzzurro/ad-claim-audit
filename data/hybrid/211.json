@@ -1,0 +1,79 @@
+{
+  "sample_id": "211",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "国火靠科技与狠国杀出重围",
+    "PT-CHINA科技混搭全球顶尖技术"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        2,
+        14
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        18
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条「等」与第十七条、十八条；任务书示例「科技混搭全球顶尖技术」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中使用了绝对化词汇，画面中也提到了科技混搭全球顶尖技术。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "国火靠科技与狠国杀出重围",
+      "matched": "国火靠科技与狠国杀出重围",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        2,
+        14
+      ],
+      "rule_basis": "《广告法》第九条「等」与第十七条、十八条；任务书示例「科技混搭全球顶尖技术」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "PT-CHINA科技混搭全球顶尖技术",
+      "matched": "PT-CHINA科技混搭全球顶尖技术",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        18
+      ],
+      "rule_basis": "《广告法》第九条「等」与第十七条、十八条；任务书示例「科技混搭全球顶尖技术」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

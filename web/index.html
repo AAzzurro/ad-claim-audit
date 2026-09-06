@@ -36,7 +36,6 @@
             <div class="device-screen">
               <video id="player" playsinline controls></video>
               <div class="drop" id="drop">
-                <input id="file" type="file" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.mp4,.mov,.mkv,.webm" hidden />
                 <button type="button" class="drop-hit" id="pick-file">
                   <span class="drop-icon" aria-hidden="true">
                     <svg viewBox="0 0 48 48" fill="none">
@@ -58,8 +57,10 @@
             <span id="video-dur"></span>
           </div>
           <div class="stage-actions">
+            <input id="file" class="sr-file" type="file" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.mp4,.mov,.mkv,.webm" />
             <button type="button" class="ghost-btn" id="replace-file">更换视频</button>
             <button type="button" class="ghost-btn" id="open-library">从测试集选择</button>
+            <button type="button" class="ghost-btn" id="next-file" hidden>审核下一条</button>
           </div>
         </div>
       </section>
@@ -99,6 +100,10 @@
           </div>
           <div class="chips" id="labels"></div>
           <div class="engine-row" id="engines" hidden></div>
+          <section class="frames" id="frames" hidden>
+            <div class="kicker">问题画面</div>
+            <div class="frame-gallery" id="frame-gallery"></div>
+          </section>
           <div class="tabs" role="tablist">
             <button type="button" class="tab is-on" data-tab="evidence">证据</button>
             <button type="button" class="tab" data-tab="audio">口播</button>

@@ -1,0 +1,81 @@
+{
+  "sample_id": "141",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "性价比调意虚均位列第一",
+    "最后两单现货"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        11
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        69,
+        75
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；任务书示例"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 绝对化表述、限时稀缺、虚构收益。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "性价比调意虚均位列第一",
+      "matched": "性价比调意虚均位列第一",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        11
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后两单现货",
+      "matched": "最后两单现货",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        69,
+        75
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

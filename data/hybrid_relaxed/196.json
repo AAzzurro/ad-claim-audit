@@ -1,0 +1,74 @@
+{
+  "sample_id": "196",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "…家人一视同仁，让所有家人经济条件好不好的，都拿到最低价格，356、356块钱哈。宝贝四袋给大家891袋。…",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        95
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "任务书 9(2) 限时促销归入诱导消费"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在诱导消费 画面中出现「最后几单」，属于诱导消费。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "…家人一视同仁，让所有家人经济条件好不好的，都拿到最低价格，356、356块钱哈。宝贝四袋给大家891袋。…",
+      "matched": "最低价格",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        95
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "source": "unknown",
+      "time": null,
+      "span": null,
+      "rule_basis": "任务书 9(2) 限时促销归入诱导消费",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    }
+  }
+}

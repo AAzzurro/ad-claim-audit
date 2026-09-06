@@ -20,6 +20,7 @@ from src.analyze import MODES, analyze_video, engines_loaded, ollama_status
 from src.config import ROOT, Settings
 from src.llm import DEFAULT_HOST, DEFAULT_MODEL, LLMError
 from src.media import VIDEO_EXTS, list_videos, probe_duration
+from src.review_frames import render_review_frames
 from src.rules import RISK_LABELS
 
 logging.basicConfig(
@@ -31,6 +32,7 @@ logger = logging.getLogger("app")
 
 WEB_DIR = ROOT / "web"
 UPLOAD_DIR = ROOT / "data" / "uploads"
+REVIEW_DIR = ROOT / "data" / "review_frames"
 MAX_UPLOAD_BYTES = 200 * 1024 * 1024
 
 app = FastAPI(title="审言 · 短视频虚假宣传检测", version="1.0")
@@ -53,6 +55,7 @@ def _settings() -> Settings:
     s = Settings(videos_dir=ROOT / "videos", data_dir=ROOT / "data")
     s.ensure_dirs()
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     return s
 
 
@@ -192,6 +195,50 @@ def job_media(job_id: str) -> FileResponse:
     return FileResponse(path, media_type="video/mp4", filename=job["video_name"])
 
 
+@app.get("/api/jobs/{job_id}/frames/{name}")
+def job_frame(job_id: str, name: str) -> FileResponse:
+    job = _get_job(job_id)
+    frames_dir = Path(job.get("frames_dir") or "")
+    safe = Path(name).name
+    if not frames_dir or safe != name or not safe.endswith(".jpg"):
+        raise HTTPException(404, "画面不存在")
+    path = frames_dir / safe
+    if not path.exists() or not path.is_file():
+        raise HTTPException(404, "画面不存在")
+    return FileResponse(path, media_type="image/jpeg", filename=safe)
+
+
+def _attach_problem_frames(job: dict[str, Any], result: dict[str, Any], settings: Settings) -> dict[str, Any]:
+    if result.get("verdict") != "risk":
+        result["problem_frames"] = []
+        return result
+    dest = REVIEW_DIR / job["id"]
+    dest.mkdir(parents=True, exist_ok=True)
+    for old in dest.glob("*.jpg"):
+        old.unlink(missing_ok=True)
+    ocr_path = settings.ocr_dir / f"{job['sample_id']}.json"
+    ocr = {}
+    if ocr_path.exists():
+        ocr = json.loads(ocr_path.read_text(encoding="utf-8"))
+    frames = render_review_frames(
+        Path(job["video_path"]),
+        ocr,
+        list(result.get("evidence") or []),
+        dest,
+        max_width=settings.max_frame_width,
+    )
+    job["frames_dir"] = str(dest)
+    _put_job(job)
+    result["problem_frames"] = [
+        {
+            **item,
+            "url": f"/api/jobs/{job['id']}/frames/{item['image_name']}",
+        }
+        for item in frames
+    ]
+    return result
+
+
 @app.post("/api/jobs/{job_id}/analyze")
 async def analyze_job(job_id: str, body: Optional[AnalyzeIn] = None) -> StreamingResponse:
     job = _get_job(job_id)
@@ -213,16 +260,22 @@ async def analyze_job(job_id: str, body: Optional[AnalyzeIn] = None) -> Streamin
                 _ANALYZE_LOCK.acquire()
             try:
                 progress("start", "开始审核")
+                settings = _settings()
                 result = analyze_video(
                     Path(job["video_path"]),
                     job["sample_id"],
                     mode,
                     force=payload.force,
                     on_progress=progress,
-                    settings=_settings(),
+                    settings=settings,
                     llm_model=payload.model,
                     llm_host=payload.host,
                 )
+                if result.get("verdict") == "risk":
+                    progress("review", "正在截取问题画面…")
+                    result = _attach_problem_frames(job, result, settings)
+                else:
+                    result["problem_frames"] = []
                 result["job_id"] = job_id
                 result["from_library"] = job["from_library"]
                 loop.call_soon_threadsafe(

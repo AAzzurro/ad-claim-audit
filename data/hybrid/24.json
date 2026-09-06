@@ -1,0 +1,104 @@
+{
+  "sample_id": "24",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "首创者",
+    "源头抑黑更温和不",
+    "连续5年销量NO1"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        2
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+    "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 画面中出现绝对化用语和销量断言，口播中提到今天一号链接可以放心拍。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "首创者",
+      "matched": "首创",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        2
+      ],
+      "rule_basis": "《广告法》第九条第三项「等」：与「第一/唯一」同类的绝对化（首创、首个、首款），不用测试集原句",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "源头抑黑更温和不",
+      "matched": "源头抑黑更温和不",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "连续5年销量NO1",
+      "matched": "连续5年销量NO1",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

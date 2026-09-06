@@ -1,0 +1,45 @@
+{
+  "sample_id": "203",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "9个人我都能断根"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        62,
+        70
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「断根」「全国第一」；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "9个人我都能断根",
+      "matched": "9个人我都能断根",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          62,
+          70
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「断根」「全国第一」；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中出现功效断言和诱导消费。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"9个人我都能断根\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"今天第一个给你用\",\"source\":\"audio\"}],\"rule_basis\":[\"《广告法》第十六条功效断言；任务书示例「断根」「全国第一」；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"口播中出现功效断言和诱导消费。\"}"
+}

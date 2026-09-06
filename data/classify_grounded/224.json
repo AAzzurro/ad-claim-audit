@@ -1,0 +1,45 @@
+{
+  "sample_id": "224",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行李箱天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行李箱天花板",
+      "matched": "行李箱天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播和画面均出现「行李箱天花板」，属于绝对化描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"行李箱天花板\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」\"],\"explanation\":\"口播和画面均出现「行李箱天花板」，属于绝对化描述。\"}"
+}

@@ -1,0 +1,55 @@
+{
+  "sample_id": "186",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "改善静脉曲张"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        13,
+        19
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；任务书示例「改善静脉曲张」「立竿见影」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 静脉曲张为医疗用语，且有立竿见影效果断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善静脉曲张",
+      "matched": "改善静脉曲张",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        13,
+        19
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例「改善静脉曲张」「立竿见影」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

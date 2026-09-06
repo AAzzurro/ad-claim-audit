@@ -1,0 +1,80 @@
+{
+  "sample_id": "216",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "吃梅才真的没有天花板，别再拿自己底子差当借口了。你看我之前的底子，给…",
+    "真的特别管用的整容与变美斜招"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        57,
+        71
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条、第十七条、十八条；任务书示例；导向内容"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 整容与变美斜招为夸大功效，当借口7为诱导消费，旁门左道为其他线索。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "吃梅才真的没有天花板，别再拿自己底子差当借口了。你看我之前的底子，给…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "真的特别管用的整容与变美斜招",
+      "matched": "真的特别管用的整容与变美斜招",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        57,
+        71
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例；导向内容",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

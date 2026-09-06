@@ -1,0 +1,120 @@
+{
+  "sample_id": "215",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "护肤界的天花板！",
+    "价值3,000多的美容仪直接免费送",
+    "原价位媲美千元的质感",
+    "专门针对35以上熟溶肌抗皱"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        12
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        90
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        91,
+        104
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "护肤界的天花板！",
+      "matched": "护肤界的天花板！",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          8
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "价值3,000多的美容仪直接免费送",
+      "matched": "价值3,000多的美容仪直接免费送",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          12
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "原价位媲美千元的质感",
+      "matched": "原价位媲美千元的质感",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          80,
+          90
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "专门针对35以上熟溶肌抗皱",
+      "matched": "专门针对35以上熟溶肌抗皱",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          91,
+          104
+        ]
+      },
+      "rule_basis": "《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "口播和画面中多次出现绝对化描述和功效断言。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\n  \"risk_labels\": [\"存在夸大功效\", \"存在诱导消费\"],\n  \"evidence\": [\n    {\"label\": \"存在夸大功效\", \"text\": \"护肤界的天花板！\", \"source\": \"visual\"},\n    {\"label\": \"存在夸大功效\", \"text\": \"价值3,000多的美容仪直接免费送\", \"source\": \"visual\"},\n    {\"label\": \"存在夸大功效\", \"text\": \"原价位媲美千元的质感\", \"source\": \"audio\"},\n    {\"label\": \"存在夸大功效\", \"text\": \"专门针对35以上熟溶肌抗皱\", \"source\": \"audio\"}\n  ],\n  \"rule_basis\": [\"《广告法》第十六条功效断言；任务书示例「护肤界的天花板」「价值3,000多的美容仪」「原价位媲美千元的质感」\"],\n  \"explanation\": \"口播和画面中多次出现绝对化描述和功效断言。\"\n}"
+}

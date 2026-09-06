@@ -1,0 +1,153 @@
+{
+  "sample_id": "u_c42cf4462325",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "最后两单",
+    "特供价只要399",
+    "14天紧致淡纹提亮",
+    "14天改善10大纹路",
+    "14天真人评估"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        63,
+        67
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        1,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 口播中出现限时稀缺、价格误导，以及多项功效断言。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后两单",
+      "matched": "最后两单",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        63,
+        67
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "特供价只要399",
+      "matched": "特供价只要399",
+      "source": "visual",
+      "time": 12.0,
+      "span": [
+        1,
+        9
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天紧致淡纹提亮",
+      "matched": "14天紧致淡纹提亮",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天改善10大纹路",
+      "matched": "14天改善10大纹路",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天真人评估",
+      "matched": "14天真人评估",
+      "source": "visual",
+      "time": 15.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第十六条功效断言；任务书示例「最后几单」「特供价」「14天改善」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

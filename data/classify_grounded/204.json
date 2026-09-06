@@ -1,0 +1,17 @@
+{
+  "sample_id": "204",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(3) 有条件描述不必然构成风险；粉丝反馈、催单、缺货、领券不是虚假宣传话术"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "口播为粉丝评价和催单，无绝对化描述或虚假收益承诺。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"正常\"],\"evidence\":[],\"rule_basis\":[\"任务书 9(3) 有条件描述不必然构成风险；粉丝反馈、催单、缺货、领券不是虚假宣传话术\"],\"explanation\":\"口播为粉丝评价和催单，无绝对化描述或虚假收益承诺。\"}"
+}

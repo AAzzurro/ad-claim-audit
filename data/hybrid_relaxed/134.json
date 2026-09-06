@@ -1,0 +1,103 @@
+{
+  "sample_id": "134",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "35斤年品牌就是资产是带的",
+    "200多位科研专家",
+    "400张发明专利"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        95,
+        108
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        113,
+        122
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        129,
+        137
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「35斤年品牌」「科研专家」「发明专利」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播未出现绝对化用语，但画面中多次出现绝对化描述和功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "35斤年品牌就是资产是带的",
+      "matched": "35斤年品牌就是资产是带的",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        95,
+        108
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「35斤年品牌」「科研专家」「发明专利」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "200多位科研专家",
+      "matched": "200多位科研专家",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        113,
+        122
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「35斤年品牌」「科研专家」「发明专利」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "400张发明专利",
+      "matched": "400张发明专利",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        129,
+        137
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「行业天花板」「35斤年品牌」「科研专家」「发明专利」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

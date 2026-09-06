@@ -1,0 +1,45 @@
+{
+  "sample_id": "116",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全年最低价"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        142,
+        147
+      ]
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费常见话术；《广告法》第二十五条"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价",
+      "matched": "全年最低价",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          142,
+          147
+        ]
+      },
+      "rule_basis": "任务书 9(2) 诱导消费常见话术；《广告法》第二十五条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "全年最低价和价格误导，以及拍链接下单的诱导消费。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年最低价\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"399价格还低\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"拍链接下单\",\"source\":\"audio\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费常见话术；《广告法》第二十五条\"],\"explanation\":\"全年最低价和价格误导，以及拍链接下单的诱导消费。\"}"
+}

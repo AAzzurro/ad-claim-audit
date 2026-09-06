@@ -1,0 +1,79 @@
+{
+  "sample_id": "198",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "真的会让男人念念不忘",
+    "被窝都带香味儿，一走过别人都能闻到，就是自带体香"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        11,
+        35
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「念念不忘」「自带体香」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中多次出现对产品功效的断言，且描述夸张。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "真的会让男人念念不忘",
+      "matched": "真的会让男人念念不忘",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ],
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「念念不忘」「自带体香」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "被窝都带香味儿，一走过别人都能闻到，就是自带体香",
+      "matched": "被窝都带香味儿，一走过别人都能闻到，就是自带体香",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        11,
+        35
+      ],
+      "rule_basis": "《广告法》第十六条：不得断言产品具有特定功效；任务书示例「念念不忘」「自带体香」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

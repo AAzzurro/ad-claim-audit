@@ -1,0 +1,104 @@
+{
+  "sample_id": "237",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "称为实用天花板，机身纯屏自由嵌，洗衣不突出密蜂嵌入美观时尚。十…",
+    "实用天花板",
+    "实用天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化用语归入夸大功效；任务书示例「行业天花板」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播和画面均出现绝对化用语「实用天花板」。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "称为实用天花板，机身纯屏自由嵌，洗衣不突出密蜂嵌入美观时尚。十…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "实用天花板",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        2,
+        5
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "实用天花板",
+      "matched": "实用天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；任务书示例「行业天花板」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

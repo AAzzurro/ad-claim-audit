@@ -1,0 +1,45 @@
+{
+  "sample_id": "225",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "做到了天花板的材质"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        2,
+        11
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「天花板」「最高级」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "做到了天花板的材质",
+      "matched": "做到了天花板的材质",
+      "evidence_position": {
+        "source": "visual",
+        "time": 6.0,
+        "span": [
+          2,
+          11
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「天花板」「最高级」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中多次出现「天花板」材质描述，构成绝对化功效断言。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"做到了天花板的材质\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；任务书示例「天花板」「最高级」\"],\"explanation\":\"画面中多次出现「天花板」材质描述，构成绝对化功效断言。\"}"
+}

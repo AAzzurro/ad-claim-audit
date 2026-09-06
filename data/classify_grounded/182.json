@@ -1,0 +1,58 @@
+{
+  "sample_id": "182",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [
+    "20倍吸收率",
+    "20倍修复效率提升"
+  ],
+  "evidence_position": [
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "20倍吸收率",
+      "matched": "20倍吸收率",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」",
+      "hedged": false,
+      "grounded": false
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "20倍修复效率提升",
+      "matched": "20倍修复效率提升",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"20倍吸收率\",\"source\":\"visual\"},{\"label\":\"存在夸大功效\",\"text\":\"20倍修复效率提升\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「20倍吸收率」「20倍修复效率提升」\"],\"explanation\":\"口播中提到20倍修复效率提升，画面中出现20倍吸收率，均属绝对化描述。\"}"
+}

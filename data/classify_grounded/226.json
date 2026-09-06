@@ -1,0 +1,45 @@
+{
+  "sample_id": "226",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "抗腐蚀抗菌的能力都是天花板的"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        94
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语归入夸大功效；《广告法》第十六条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗腐蚀抗菌的能力都是天花板的",
+      "matched": "抗腐蚀抗菌的能力都是天花板的",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          80,
+          94
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中出现绝对化用语「抗腐蚀抗菌的能力都是天花板的」。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"抗腐蚀抗菌的能力都是天花板的\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化用语归入夸大功效；《广告法》第十六条\"],\"explanation\":\"口播中出现绝对化用语「抗腐蚀抗菌的能力都是天花板的」。\"}"
+}

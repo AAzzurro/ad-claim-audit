@@ -1,0 +1,225 @@
+{
+  "sample_id": "94",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "今天只",
+    "399",
+    "48小时内现货速发",
+    "送妈妈",
+    "送小姨",
+    "送自己",
+    "送婆婆",
+    "送外婆"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        53,
+        56
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        59,
+        68
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        70,
+        73
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        3
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费常见表述；其他线索示例送礼"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在其他线索 模型补上「存在诱导消费、存在其他线索」。 口播中有多处诱导消费和送礼信息。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "今天只",
+      "matched": "今天只",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "399",
+      "matched": "399",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        53,
+        56
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "48小时内现货速发",
+      "matched": "48小时内现货速发",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        59,
+        68
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "送妈妈",
+      "matched": "送妈妈",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        70,
+        73
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "送小姨",
+      "matched": "送小姨",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "送自己",
+      "matched": "送自己",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "送婆婆",
+      "matched": "送婆婆",
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "送外婆",
+      "matched": "送外婆",
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        3
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见表述；其他线索示例送礼",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 8,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

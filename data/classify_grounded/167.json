@@ -1,0 +1,120 @@
+{
+  "sample_id": "167",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "唯一的副作用就是让你变得太好看了",
+    "不红不肿，不脱皮",
+    "7分钟快速褪红4天",
+    "改善泛红，焕亮，弹嫩"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        4,
+        20
+      ]
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        84,
+        92
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ]
+    },
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        4
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "唯一的副作用就是让你变得太好看了",
+      "matched": "唯一的副作用就是让你变得太好看了",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          4,
+          20
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "不红不肿，不脱皮",
+      "matched": "不红不肿，不脱皮",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          84,
+          92
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "7分钟快速褪红4天",
+      "matched": "7分钟快速褪红4天",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "改善泛红，焕亮，弹嫩",
+      "matched": "改善泛红，焕亮，弹嫩",
+      "evidence_position": {
+        "source": "visual",
+        "time": 9.0,
+        "span": [
+          0,
+          4
+        ]
+      },
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "explanation": "口播中多次出现具体功效断言，且无条件描述。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"唯一的副作用就是让你变得太好看了\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"不红不肿，不脱皮\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"7分钟快速褪红4天\",\"source\":\"audio\"},{\"label\":\"存在夸大功效\",\"text\":\"改善泛红，焕亮，弹嫩\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「不红不肿」「7分钟快速褪红」\"],\"explanation\":\"口播中多次出现具体功效断言，且无条件描述。\"}"
+}

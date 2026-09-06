@@ -1,0 +1,17 @@
+{
+  "sample_id": "57",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在其他线索\"],\"evidence\":[{\"label\":\"存在其他线索\",\"text\":\"使马运势，使力开停注举作核心内容\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(4) 以迷信好运、转运推销归入其他线索\"],\"explanation\":\"画面中出现与运势相关的迷信内容。\"}"
+}

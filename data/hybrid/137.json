@@ -1,0 +1,55 @@
+{
+  "sample_id": "137",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "14天紧致淡纹提亮"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十七条、十八条；任务书示例"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 全年送最多为诱导消费，全网低价加退货包运费为虚假收益承诺，14天紧致淡纹提亮为夸大功效。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天紧致淡纹提亮",
+      "matched": "14天紧致淡纹提亮",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "《广告法》第十七条、十八条；任务书示例",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

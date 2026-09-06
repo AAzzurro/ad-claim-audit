@@ -1,0 +1,55 @@
+{
+  "sample_id": "57",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在其他线索"
+  ],
+  "evidence": [
+    "使马运势，使力开停注举作核心内容"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        16
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "explanation": "模型命中：存在其他线索 模型补上「存在其他线索」。 画面中出现与运势相关的迷信内容。",
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "使马运势，使力开停注举作核心内容",
+      "matched": "使马运势，使力开停注举作核心内容",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        16
+      ],
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在其他线索"
+      ]
+    }
+  }
+}

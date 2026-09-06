@@ -1,0 +1,55 @@
+{
+  "sample_id": "159",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "轻松突破、真的很好使、真的很管用"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；任务书示例「轻松突破」「真的很好使」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 夸大功效加诱导消费。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "轻松突破、真的很好使、真的很管用",
+      "matched": "轻松突破、真的很好使、真的很管用",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例「轻松突破」「真的很好使」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "sample_id": "79",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "行业省钱天花板一天不到5分钱"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "engine": "rules"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《直播电商监督管理办法》第三十二条；任务书 9(3)"
+  ],
+  "explanation": "规则命中：存在夸大功效 规则补上「存在夸大功效」。 模型给出的风险缺少合格原文证据，按正常处理。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "行业省钱天花板一天不到5分钱",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        7
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "正常"
+      ]
+    }
+  }
+}

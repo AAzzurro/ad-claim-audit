@@ -1,0 +1,45 @@
+{
+  "sample_id": "163",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "静脉曲张手术"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：涉及疾病治疗预防归入夸大功效；《广告法》第十六条"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "静脉曲张手术",
+      "matched": "静脉曲张手术",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          6
+        ]
+      },
+      "rule_basis": "标注细则：涉及疾病治疗预防归入夸大功效；《广告法》第十六条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现「静脉曲张手术」，暗示产品能替代医疗手段。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"静脉曲张手术\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：涉及疾病治疗预防归入夸大功效；《广告法》第十六条\"],\"explanation\":\"画面中出现「静脉曲张手术」，暗示产品能替代医疗手段。\"}"
+}

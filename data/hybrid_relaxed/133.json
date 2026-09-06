@@ -1,0 +1,79 @@
+{
+  "sample_id": "133",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "增强...",
+    "旗舰蓝罐300g"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        1,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中提到「增强...」，画面中出现「旗舰蓝罐300g」，可能暗示该产品为顶级或最佳。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "增强...",
+      "matched": "增强...",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        1,
+        6
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "旗舰蓝罐300g",
+      "matched": "旗舰蓝罐300g",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        8
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「全国第一」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "sample_id": "178",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "超分子苦参碱省酸研",
+    "超分子分子毕菌强",
+    "一号祛痘为什么怎么能祛痘根"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        52,
+        61
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        86,
+        94
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        135
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「超分子苦参碱」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中提到「一号祛痘为什么怎么能祛痘根」，画面中出现「超分子苦参碱」和「超分子分子毕菌强」，均涉及功效断言。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "超分子苦参碱省酸研",
+      "matched": "超分子苦参碱省酸研",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        52,
+        61
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「超分子苦参碱」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "超分子分子毕菌强",
+      "matched": "超分子分子毕菌强",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        86,
+        94
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「超分子苦参碱」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "一号祛痘为什么怎么能祛痘根",
+      "matched": "一号祛痘为什么怎么能祛痘根",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        122,
+        135
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「超分子苦参碱」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

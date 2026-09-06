@@ -166,6 +166,8 @@ def evaluate(
         "note": (
             "词表冻结：本表只作事后评测，不回写规则。"
             if experiment == "e1"
+            else "E1∪E2 融合事后评测；未按测试集改词表或提示词。"
+            if experiment == "e3"
             else "少样本分类事后评测；提示词示例来自任务书与法规，未用测试视频。"
         ),
         "disagreements": disagreements,

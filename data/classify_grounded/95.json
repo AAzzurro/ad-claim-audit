@@ -1,0 +1,45 @@
+{
+  "sample_id": "95",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全年最低价369"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        45,
+        53
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价369",
+      "matched": "全年最低价369",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          45,
+          53
+        ]
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播中有多处限时促销和价格误导，画面中也有引导站外导流的提示。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"剩30秒\",\"source\":\"audio\"},{\"label\":\"存在诱导消费\",\"text\":\"全年最低价369\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"618抢先购\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"不要399，全部48小时内现货速发\",\"source\":\"audio\"},{\"label\":\"存在其他线索\",\"text\":\"拍下链接\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：限时稀缺与价格误导归入诱导消费；迷信运气承诺归入其他线索。风险常在画面叠字\"],\"explanation\":\"口播中有多处限时促销和价格误导，画面中也有引导站外导流的提示。\"}"
+}

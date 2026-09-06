@@ -1,0 +1,57 @@
+{
+  "sample_id": "124",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在站外导流风险线索"
+  ],
+  "evidence": [
+    "最后一波了"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        72,
+        77
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；站外导流归入站外导流风险线索。风险常在画面叠字"
+  ],
+  "explanation": "模型命中：存在诱导消费、存在站外导流风险线索 模型补上「存在诱导消费、存在站外导流风险线索」。 口播中有多次催单，画面中多次出现拍下链接。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后一波了",
+      "matched": "最后一波了",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        72,
+        77
+      ],
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；站外导流归入站外导流风险线索。风险常在画面叠字",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在站外导流风险线索"
+      ]
+    }
+  }
+}

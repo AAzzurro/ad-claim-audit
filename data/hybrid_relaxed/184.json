@@ -1,0 +1,129 @@
+{
+  "sample_id": "184",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效",
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "买1套送1套",
+    "过期不候！",
+    "国际进口博览会同款",
+    "5.00会会会会会超过98%的同行业所税店"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效"
+  ],
+  "explanation": "模型命中：存在夸大功效、存在诱导消费 模型补上「存在夸大功效、存在诱导消费」。 画面中出现诱导消费的限时促销信息和夸大功效的绝对化描述。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "买1套送1套",
+      "matched": "买1套送1套",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "过期不候！",
+      "matched": "过期不候！",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ],
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "国际进口博览会同款",
+      "matched": "国际进口博览会同款",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "5.00会会会会会超过98%的同行业所税店",
+      "matched": "5.00会会会会会超过98%的同行业所税店",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "标注细则：限时促销归入诱导消费；绝对化描述归入夸大功效",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效",
+        "存在诱导消费"
+      ]
+    }
+  }
+}

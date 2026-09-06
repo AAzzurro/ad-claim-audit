@@ -1,0 +1,64 @@
+{
+  "sample_id": "118",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "14天改善10大纹路",
+    "最后几单"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        10
+      ]
+    },
+    {
+      "source": "unknown",
+      "time": null,
+      "span": null
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "14天改善10大纹路",
+      "matched": "14天改善10大纹路",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          10
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": true
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "最后几单",
+      "matched": "最后几单",
+      "evidence_position": {
+        "source": "unknown",
+        "time": null,
+        "span": null
+      },
+      "rule_basis": "绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字",
+      "hedged": false,
+      "grounded": false
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "explanation": "画面中出现绝对化描述和限时促销信息。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"14天改善10大纹路\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"最后几单\",\"source\":\"visual\"}],\"rule_basis\":[\"绝对化描述归入夸大功效；限时促销归入诱导消费。风险常在画面叠字\"],\"explanation\":\"画面中出现绝对化描述和限时促销信息。\"}"
+}

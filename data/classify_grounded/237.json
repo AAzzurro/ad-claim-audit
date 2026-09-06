@@ -1,0 +1,45 @@
+{
+  "sample_id": "237",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "实用天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        5
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化用语归入夸大功效；任务书示例「行业天花板」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "实用天花板",
+      "matched": "实用天花板",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          0,
+          5
+        ]
+      },
+      "rule_basis": "标注细则：绝对化用语归入夸大功效；任务书示例「行业天花板」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "口播和画面均出现绝对化用语「实用天花板」。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"实用天花板\",\"source\":\"visual\"}],\"rule_basis\":[\"标注细则：绝对化用语归入夸大功效；任务书示例「行业天花板」\"],\"explanation\":\"口播和画面均出现绝对化用语「实用天花板」。\"}"
+}

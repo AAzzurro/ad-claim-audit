@@ -1,0 +1,55 @@
+{
+  "sample_id": "179",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "6.08倍的累积渗透量，真正透皮好吸收"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条、十八条；任务书示例「6.08倍」「首单立减」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 绝对化功效断言，诱导消费，虚假收益承诺。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "6.08倍的累积渗透量，真正透皮好吸收",
+      "matched": "6.08倍的累积渗透量，真正透皮好吸收",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "《广告法》第九条、第十七条、十八条；任务书示例「6.08倍」「首单立减」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

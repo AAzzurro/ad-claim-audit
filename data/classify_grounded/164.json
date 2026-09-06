@@ -1,0 +1,45 @@
+{
+  "sample_id": "164",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "有助于控制体内脂肪"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        4,
+        11
+      ]
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第十六条、第二十八条；任务书示例「行业天花板」「三天见效」「立即抢购」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "有助于控制体内脂肪",
+      "matched": "有助于控制体内脂肪",
+      "evidence_position": {
+        "source": "visual",
+        "time": 0.0,
+        "span": [
+          4,
+          11
+        ]
+      },
+      "rule_basis": "《广告法》第十六条、第二十八条；任务书示例「行业天花板」「三天见效」「立即抢购」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面中出现功效断言和诱导消费的字样。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"有助于控制体内脂肪\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"立即抢购\",\"source\":\"visual\"}],\"rule_basis\":[\"《广告法》第十六条、第二十八条；任务书示例「行业天花板」「三天见效」「立即抢购」\"],\"explanation\":\"画面中出现功效断言和诱导消费的字样。\"}"
+}

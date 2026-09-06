@@ -1,0 +1,45 @@
+{
+  "sample_id": "25",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "连续5年销量NO1"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        9
+      ]
+    }
+  ],
+  "rule_basis": [
+    "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「连续5年销量NO1」「最后几单」"
+  ],
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "连续5年销量NO1",
+      "matched": "连续5年销量NO1",
+      "evidence_position": {
+        "source": "visual",
+        "time": 3.0,
+        "span": [
+          0,
+          9
+        ]
+      },
+      "rule_basis": "绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「连续5年销量NO1」「最后几单」",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "画面出现绝对化用语，口播有诱导消费行为。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在夸大功效\",\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在夸大功效\",\"text\":\"连续5年销量NO1\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"今天讲用法，先拍再告诉你怎么玩\",\"source\":\"audio\"}],\"rule_basis\":[\"绝对化描述归入夸大功效；《广告法》第十六条；任务书示例「连续5年销量NO1」「最后几单」\"],\"explanation\":\"画面出现绝对化用语，口播有诱导消费行为。\"}"
+}

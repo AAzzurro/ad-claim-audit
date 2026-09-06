@@ -1,0 +1,17 @@
+{
+  "sample_id": "5",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费和站外导流风险线索示例"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在站外导流风险线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"15天内发货\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"晚发立赔过敏包退\",\"source\":\"visual\"},{\"label\":\"存在站外导流风险线索\",\"text\":\"ANSRSN777\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费和站外导流风险线索示例\"],\"explanation\":\"发货时间承诺和站外导流标识符。\"}"
+}

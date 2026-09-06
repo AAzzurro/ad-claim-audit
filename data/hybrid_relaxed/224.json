@@ -1,0 +1,104 @@
+{
+  "sample_id": "224",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "箱这个应该就是天花板了，这个材质啊给大家做的是PC的，不是身边成AB…",
+    "行李箱天花板，价格质量各方面都很到位",
+    "行李箱天花板"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        6
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播和画面均出现「行李箱天花板」，属于绝对化描述。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "箱这个应该就是天花板了，这个材质啊给大家做的是PC的，不是身边成AB…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行李箱天花板，价格质量各方面都很到位",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        6
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行李箱天花板",
+      "matched": "行李箱天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；任务书示例「行业天花板」「最高级」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

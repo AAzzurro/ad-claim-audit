@@ -1,0 +1,17 @@
+{
+  "sample_id": "2",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 限时促销归入诱导消费；《直播电商监督管理办法》第三十二条"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"10天内发货\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"0元试穿退货包运费\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 限时促销归入诱导消费；《直播电商监督管理办法》第三十二条\"],\"explanation\":\"画面中出现的10天内发货和0元试穿退货包运费属于诱导消费。\"}"
+}

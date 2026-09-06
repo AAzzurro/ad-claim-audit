@@ -1,0 +1,130 @@
+{
+  "sample_id": "123",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在诱导消费",
+    "存在其他线索"
+  ],
+  "evidence": [
+    "…管，这里更多。你买一单桌面上保证选送全年送次多，全年最低价，但是我发现买不到这样子。如果以后来神。",
+    "库存不多",
+    "今天不要399",
+    "今天只要"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        158,
+        163
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        11
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+    "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条"
+  ],
+  "explanation": "规则命中：存在诱导消费 模型命中：存在诱导消费、存在其他线索 模型补上「存在其他线索」。 口播中有多处限时促销和价格误导，画面中出现拍下链接。",
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "…管，这里更多。你买一单桌面上保证选送全年送次多，全年最低价，但是我发现买不到这样子。如果以后来神。",
+      "matched": "全年最低价",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        158,
+        163
+      ],
+      "rule_basis": "标注细则「价格或促销误导」示例「全网最低价」；比较价格须有真实基准，不得虚构最低价",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "库存不多",
+      "matched": "库存不多",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        11
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "今天不要399",
+      "matched": "今天不要399",
+      "source": "visual",
+      "time": 3.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在诱导消费",
+      "evidence": "今天只要",
+      "matched": "今天只要",
+      "source": "visual",
+      "time": 6.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "任务书 9(2) 诱导消费常见话术；《直播电商监督管理办法》第三十二条",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 4,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在诱导消费"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在诱导消费",
+        "存在其他线索"
+      ]
+    }
+  }
+}

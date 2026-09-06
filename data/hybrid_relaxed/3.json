@@ -1,0 +1,28 @@
+{
+  "sample_id": "3",
+  "experiment": "e3",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(5) 证据不足时应输出无法判断"
+  ],
+  "explanation": "现行法规/任务书词表未命中。未命中不等于人工认定无风险。",
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "无法判断"
+      ]
+    }
+  }
+}

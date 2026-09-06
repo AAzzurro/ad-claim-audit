@@ -22,6 +22,7 @@ from src.rules import (
     LABEL_OFFSITE,
     LABEL_OTHER,
     LABEL_UNKNOWN,
+    LABEL_YIELD,
     RISK_LABELS,
 )
 
@@ -57,6 +58,7 @@ _INDUCE_EV = re.compile(
 )
 _OFFSITE_EV = re.compile(r"扫码|加群|加微信|加薇|加v\b|加V\b|私信|淘口令|站外联系")
 _OTHER_EV = re.compile(r"好运|转运|开运|迷信|风水")
+_YIELD_EV = re.compile(r"稳赚|保本|无风险|日入|月入|包过|保过|躺赚|保证回本|保收益")
 
 
 def _evidence_supports(label: str, text: str) -> bool:
@@ -69,6 +71,8 @@ def _evidence_supports(label: str, text: str) -> bool:
         return bool(_OFFSITE_EV.search(text))
     if label == LABEL_OTHER:
         return bool(_OTHER_EV.search(text))
+    if label == LABEL_YIELD:
+        return bool(_YIELD_EV.search(text))
     return True
 
 
@@ -108,10 +112,10 @@ def build_user_prompt(asr: dict[str, Any] | None, ocr: dict[str, Any] | None) ->
         else:
             visual_bits.append(text)
     visual_block = "\n".join(visual_bits)
-    if len(visual_block) > 1800:
-        visual_block = visual_block[:1800] + "\n…"
-    if len(audio) > 1200:
-        audio = audio[:1200] + "…"
+    if len(visual_block) > 2400:
+        visual_block = visual_block[:2400] + "\n…"
+    if len(audio) > 1500:
+        audio = audio[:1500] + "…"
     prompt = f"【口播 ASR】\n{audio}\n【画面 OCR】\n{visual_block}"
     return prompt, audio, lines
 
@@ -266,6 +270,22 @@ def ground_evidence(
     return evidence, positions, kept
 
 
+def _failed_record(sample_id: str, model: str, exc: BaseException, raw: str) -> dict[str, Any]:
+    return {
+        "sample_id": sample_id,
+        "risk_labels": [LABEL_UNKNOWN],
+        "evidence": [],
+        "evidence_position": [],
+        "rule_basis": ["任务书 9(5) 证据不足时应输出无法判断"],
+        "hits": [],
+        "n_hits": 0,
+        "n_hedged": 0,
+        "explanation": f"模型调用或解析失败：{exc}",
+        "model": model,
+        "raw": raw,
+    }
+
+
 def classify_record(
     sample_id: str,
     asr: dict[str, Any] | None,
@@ -273,6 +293,7 @@ def classify_record(
     *,
     model: str,
     host: str,
+    retries: int = 1,
 ) -> dict[str, Any]:
     user_prompt, audio, visual_lines = build_user_prompt(asr, ocr)
     if not audio and not any(str(x.get("text") or "").strip() for x in visual_lines):
@@ -296,8 +317,41 @@ def classify_record(
         messages.append({"role": "assistant", "content": assistant})
     messages.append({"role": "user", "content": user_prompt})
 
-    raw = chat_json(messages, model=model, host=host)
-    parsed = _extract_json(raw)
+    attempts = max(1, retries + 1)
+    last_raw = ""
+    last_exc: BaseException | None = None
+    for attempt in range(attempts):
+        try:
+            raw = chat_json(
+                messages,
+                model=model,
+                host=host,
+                temperature=0.0 if attempt == 0 else 0.2,
+                num_predict=512 if attempt == 0 else 1024,
+            )
+            last_raw = raw
+            parsed = _extract_json(raw)
+            if attempt:
+                logger.info("%s 第 %s 次重试解析成功", sample_id, attempt)
+            return assemble_record(sample_id, parsed, audio, visual_lines, model=model, raw=raw)
+        except (LLMError, ValueError, json.JSONDecodeError) as exc:
+            last_exc = exc
+            if attempt + 1 < attempts:
+                logger.warning("%s 输出不合法，重试 %s/%s：%s", sample_id, attempt + 1, retries, exc)
+            else:
+                logger.warning("%s 重试后仍失败：%s", sample_id, exc)
+    return _failed_record(sample_id, model, last_exc or RuntimeError("未知错误"), last_raw)
+
+
+def assemble_record(
+    sample_id: str,
+    parsed: dict[str, Any],
+    audio: str,
+    visual_lines: list[dict[str, Any]],
+    *,
+    model: str,
+    raw: str,
+) -> dict[str, Any]:
     labels = _normalize_labels(parsed.get("risk_labels") or parsed.get("labels"))
     proposed = labels
     evidence, positions, hits = ground_evidence(parsed.get("evidence"), audio, visual_lines, labels)
@@ -343,7 +397,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Ollama 模型名，默认 qwen2.5:7b")
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--force", action="store_true", help="覆盖已有分类结果")
+    parser.add_argument(
+        "--from-raw",
+        action="store_true",
+        help="用已有 classify JSON 的 raw 字段重算，不调用模型",
+    )
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--retries", type=int, default=1, help="JSON 解析或调用失败后的重试次数，默认 1")
     return parser.parse_args(argv)
 
 
@@ -353,11 +413,12 @@ def run(args: argparse.Namespace) -> int:
     out_dir = args.data_dir / "classify"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    try:
-        ensure_model(args.model, args.host)
-    except LLMError as exc:
-        logger.error("%s", exc)
-        return 1
+    if not args.from_raw:
+        try:
+            ensure_model(args.model, args.host)
+        except LLMError as exc:
+            logger.error("%s", exc)
+            return 1
 
     ids = sorted({p.stem for p in asr_dir.glob("*.json")} | {p.stem for p in ocr_dir.glob("*.json")})
     wanted = _wanted(args.only)
@@ -373,7 +434,7 @@ def run(args: argparse.Namespace) -> int:
     failures = 0
     for sample_id in ids:
         dest = out_dir / f"{sample_id}.json"
-        if dest.exists() and not args.force:
+        if dest.exists() and not args.force and not args.from_raw:
             prev = _load_json(dest) or {}
             rows.append(
                 {
@@ -390,23 +451,34 @@ def run(args: argparse.Namespace) -> int:
         if ocr and ocr.get("frames"):
             ocr = {**ocr, "merged": merge_ocr_frames(ocr["frames"])}
         try:
-            result = classify_record(sample_id, asr, ocr, model=args.model, host=args.host)
+            if args.from_raw:
+                prev = _load_json(dest) or {}
+                raw = str(prev.get("raw") or "")
+                if not raw:
+                    raise ValueError("已有结果没有 raw，无法重算")
+                user_prompt, audio, visual_lines = build_user_prompt(asr, ocr)
+                if not audio and not any(str(x.get("text") or "").strip() for x in visual_lines):
+                    result = classify_record(
+                        sample_id, asr, ocr, model=args.model, host=args.host, retries=args.retries
+                    )
+                else:
+                    result = assemble_record(
+                        sample_id,
+                        _extract_json(raw),
+                        audio,
+                        visual_lines,
+                        model=str(prev.get("model") or args.model),
+                        raw=raw,
+                    )
+            else:
+                result = classify_record(
+                    sample_id, asr, ocr, model=args.model, host=args.host, retries=args.retries
+                )
         except (LLMError, ValueError, json.JSONDecodeError) as exc:
-            failures += 1
             logger.exception("分类失败 %s", sample_id)
-            result = {
-                "sample_id": sample_id,
-                "risk_labels": [LABEL_UNKNOWN],
-                "evidence": [],
-                "evidence_position": [],
-                "rule_basis": [],
-                "hits": [],
-                "n_hits": 0,
-                "n_hedged": 0,
-                "explanation": f"模型调用或解析失败：{exc}",
-                "model": args.model,
-                "raw": "",
-            }
+            result = _failed_record(sample_id, args.model, exc, "")
+        if str(result.get("explanation") or "").startswith("模型调用或解析失败"):
+            failures += 1
         save_json(dest, result)
         rows.append(
             {

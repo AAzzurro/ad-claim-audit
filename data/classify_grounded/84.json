@@ -1,0 +1,17 @@
+{
+  "sample_id": "84",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 限时促销归入诱导消费；9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年送最多\",\"source\":\"visual\"},{\"label\":\"存在其他线索\",\"text\":\"红满要是抗皱效果家\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 限时促销归入诱导消费；9(4) 以迷信好运、转运推销归入其他线索\"],\"explanation\":\"全年送最多构成诱导消费，红满要是抗皱效果家属于迷信运气承诺。\"}"
+}

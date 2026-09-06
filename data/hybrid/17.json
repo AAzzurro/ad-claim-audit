@@ -1,0 +1,55 @@
+{
+  "sample_id": "17",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "权威实测肌肤更紧·更弹·更亮"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        14
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条、第十七条；任务书示例「权威实测」、「最后几单」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 画面有绝对化用语和效果断言，口播有诱导消费用语。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "权威实测肌肤更紧·更弹·更亮",
+      "matched": "权威实测肌肤更紧·更弹·更亮",
+      "source": "visual",
+      "time": 9.0,
+      "span": [
+        0,
+        14
+      ],
+      "rule_basis": "《广告法》第九条、第十七条；任务书示例「权威实测」、「最后几单」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

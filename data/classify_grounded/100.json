@@ -1,0 +1,45 @@
+{
+  "sample_id": "100",
+  "risk_labels": [
+    "存在诱导消费"
+  ],
+  "evidence": [
+    "全年最低价"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        92,
+        97
+      ]
+    }
+  ],
+  "rule_basis": [
+    "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十条"
+  ],
+  "hits": [
+    {
+      "label": "存在诱导消费",
+      "evidence": "全年最低价",
+      "matched": "全年最低价",
+      "evidence_position": {
+        "source": "audio",
+        "time": 0.0,
+        "span": [
+          92,
+          97
+        ]
+      },
+      "rule_basis": "标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十条",
+      "hedged": false,
+      "grounded": true
+    }
+  ],
+  "n_hits": 1,
+  "n_hedged": 0,
+  "explanation": "全年最低价和价格误导性描述。已去掉缺少合格证据的标签。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在其他线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"全年最低价\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"不要399，只要359\",\"source\":\"audio\"}],\"rule_basis\":[\"标注细则：限时稀缺与价格误导归入诱导消费；《广告法》第二十条\"],\"explanation\":\"全年最低价和价格误导性描述。\"}"
+}

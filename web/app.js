@@ -27,7 +27,10 @@
     file: document.getElementById("file"),
     pick: document.getElementById("pick-file"),
     replace: document.getElementById("replace-file"),
+    next: document.getElementById("next-file"),
     drop: document.getElementById("drop"),
+    frames: document.getElementById("frames"),
+    frameGallery: document.getElementById("frame-gallery"),
     device: document.getElementById("device"),
     player: document.getElementById("player"),
     scan: document.getElementById("scan"),
@@ -93,6 +96,9 @@
     els.scan.hidden = !busy;
     els.steps.hidden = !busy && els.result.hidden;
     els.live.hidden = !busy;
+    [els.pick, els.replace, els.next, els.openLib].forEach((btn) => {
+      if (btn) btn.disabled = busy;
+    });
   };
 
   const syncRun = () => {
@@ -124,19 +130,56 @@
     els.dur.textContent = duration != null ? fmtDur(duration) : "";
   };
 
+  const resetResult = () => {
+    els.result.hidden = true;
+    els.steps.hidden = true;
+    els.live.hidden = true;
+    els.frames.hidden = true;
+    els.frameGallery.innerHTML = "";
+    if (els.next) els.next.hidden = true;
+    showError("");
+  };
+
+  const clearVideo = () => {
+    if (state.objectUrl) URL.revokeObjectURL(state.objectUrl);
+    state.objectUrl = null;
+    state.job = null;
+    els.player.removeAttribute("src");
+    els.player.load();
+    els.device.classList.remove("has-video");
+    els.name.textContent = "尚未选择视频";
+    els.dur.textContent = "";
+    els.file.value = "";
+    resetResult();
+    syncRun();
+  };
+
+  const openPicker = () => {
+    if (state.busy) {
+      showError("当前视频仍在审核，请稍后再换下一条");
+      return;
+    }
+    els.file.value = "";
+    els.file.click();
+  };
+
   const seek = (t) => {
     if (t == null || !els.player.src) return;
     els.player.currentTime = Number(t);
     els.player.play().catch(() => {});
   };
 
-  const highlight = (text, needle) => {
-    const safe = String(text || "")
+  const escapeHtml = (text) =>
+    String(text || "")
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;");
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+
+  const highlight = (text, needle) => {
+    const safe = escapeHtml(text);
     if (!needle) return safe;
-    const n = String(needle).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    const n = escapeHtml(needle);
     const i = safe.indexOf(n);
     if (i < 0) return safe;
     return `${safe.slice(0, i)}<mark>${n}</mark>${safe.slice(i + n.length)}`;
@@ -197,26 +240,37 @@
     }
     state.job = data;
     attachVideo(data.media_url, data.video_name, data.duration_sec);
+    resetResult();
     syncRun();
-    showError("");
-    els.result.hidden = true;
   };
 
   const onFile = async (file) => {
     if (!file) return;
+    if (state.busy) {
+      showError("当前视频仍在审核，请稍后再换下一条");
+      els.file.value = "";
+      return;
+    }
     const form = new FormData();
     form.append("file", file);
     els.runHint.textContent = "正在接收视频…";
+    resetResult();
     try {
       const localUrl = URL.createObjectURL(file);
       attachVideo(localUrl, file.name, null);
       await createJob(form);
     } catch (err) {
       showError(err.message);
+    } finally {
+      els.file.value = "";
     }
   };
 
   const pickLibrary = async (id) => {
+    if (state.busy) {
+      showError("当前视频仍在审核，请稍后再换下一条");
+      return;
+    }
     const form = new FormData();
     form.append("library_id", id);
     try {
@@ -227,15 +281,52 @@
     }
   };
 
+  const thumbFor = (item, frames) => {
+    if (!frames || !frames.length || item.source !== "visual") return "";
+    const hit =
+      frames.find((f) => item.time != null && Math.abs(Number(f.time) - Number(item.time)) < 0.8) ||
+      frames.find((f) => (f.quotes || []).some((q) => item.matched && String(q).includes(item.matched)));
+    if (!hit) return "";
+    return `<button type="button" class="frame-thumb" data-seek="${hit.time}">
+      <img src="${escapeHtml(hit.url)}" alt="" />
+      <span>看问题画面</span>
+    </button>`;
+  };
+
+  const renderFrames = (frames) => {
+    const items = Array.isArray(frames) ? frames : [];
+    els.frames.hidden = !items.length;
+    els.frameGallery.innerHTML = "";
+    items.forEach((frame) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "frame-card";
+      if (frame.time != null) btn.dataset.seek = String(frame.time);
+      const quote = (frame.quotes || []).slice(0, 2).join(" / ");
+      const mark = frame.highlighted ? "已标出问题文案" : "问题发生时刻";
+      btn.innerHTML = `
+        <img src="${escapeHtml(frame.url)}" alt="${escapeHtml(quote || "问题画面")}" />
+        <span class="frame-meta">
+          <b>${fmtTime(frame.time) || "画面"}</b>
+          <em>${mark}</em>
+          ${quote ? `<small>${escapeHtml(quote)}</small>` : ""}
+        </span>`;
+      els.frameGallery.appendChild(btn);
+    });
+  };
+
   const renderResult = (data) => {
     els.result.hidden = false;
     els.steps.hidden = false;
+    if (els.next) els.next.hidden = false;
     setStep("done");
     els.verdict.className = `verdict is-${data.verdict}`;
     els.stamp.textContent = data.verdict === "risk" ? "涉及虚假宣传" : data.verdict === "unknown" ? "无法判断" : "未见虚假宣传";
     els.verdictKicker.textContent = `${data.mode_meta.name} · 样本 ${data.sample_id}`;
     els.verdictTitle.textContent = data.verdict_text;
     els.explain.textContent = data.explanation || "";
+    const problemFrames = data.problem_frames || [];
+    renderFrames(problemFrames);
 
     els.labels.innerHTML = "";
     (data.risk_labels || []).forEach((lab) => {
@@ -277,6 +368,7 @@
             </div>
             <p class="quote">${highlight(item.evidence, item.matched)}</p>
             ${item.rule_basis ? `<p class="basis">${item.rule_basis}</p>` : ""}
+            ${thumbFor(item, problemFrames)}
           </article>`;
         })
         .join("");
@@ -378,6 +470,7 @@
     } finally {
       setBusy(false);
       els.scan.hidden = true;
+      syncRun();
     }
   };
 
@@ -390,8 +483,14 @@
     });
   });
 
-  els.pick.addEventListener("click", () => els.file.click());
-  els.replace.addEventListener("click", () => els.file.click());
+  els.pick.addEventListener("click", openPicker);
+  els.replace.addEventListener("click", openPicker);
+  if (els.next) {
+    els.next.addEventListener("click", () => {
+      if (state.busy) return;
+      clearVideo();
+    });
+  }
   els.player.addEventListener("loadedmetadata", () => {
     if (els.player.duration && Number.isFinite(els.player.duration)) {
       els.dur.textContent = fmtDur(els.player.duration);

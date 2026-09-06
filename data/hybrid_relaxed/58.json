@@ -1,0 +1,103 @@
+{
+  "sample_id": "58",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在其他线索"
+  ],
+  "evidence": [
+    "DeepSeek 极长深温思考，全间度索，暂能问",
+    "鲁小班24小时待命",
+    "AI健康智能体"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        24
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 24.0,
+      "span": [
+        0,
+        7
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "任务书 9(4) 以迷信好运、转运推销归入其他线索"
+  ],
+  "explanation": "模型命中：存在其他线索 模型补上「存在其他线索」。 口播内容无明确功效断言或收益保证，但画面中出现的DeepSeek、鲁小班等具有神秘色彩的描述可能涉及迷信或运气。",
+  "hits": [
+    {
+      "label": "存在其他线索",
+      "evidence": "DeepSeek 极长深温思考，全间度索，暂能问",
+      "matched": "DeepSeek 极长深温思考，全间度索，暂能问",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        24
+      ],
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "鲁小班24小时待命",
+      "matched": "鲁小班24小时待命",
+      "source": "visual",
+      "time": 21.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在其他线索",
+      "evidence": "AI健康智能体",
+      "matched": "AI健康智能体",
+      "source": "visual",
+      "time": 24.0,
+      "span": [
+        0,
+        7
+      ],
+      "rule_basis": "任务书 9(4) 以迷信好运、转运推销归入其他线索",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在其他线索"
+      ]
+    }
+  }
+}

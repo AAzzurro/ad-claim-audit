@@ -1,0 +1,17 @@
+{
+  "sample_id": "6",
+  "risk_labels": [
+    "正常"
+  ],
+  "evidence": [],
+  "evidence_position": [],
+  "rule_basis": [
+    "任务书 9(2) 诱导消费常见话术；《广告法》第二十条"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "n_hedged": 0,
+  "explanation": "模型给出的风险缺少合格原文证据，按正常处理。",
+  "model": "qwen2.5:7b",
+  "raw": "{\"risk_labels\":[\"存在诱导消费\",\"存在站外导流风险线索\"],\"evidence\":[{\"label\":\"存在诱导消费\",\"text\":\"1元起拍！\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"30元\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"限时面\",\"source\":\"visual\"},{\"label\":\"存在诱导消费\",\"text\":\"抢!抢!折\",\"source\":\"visual\"},{\"label\":\"存在站外导流风险线索\",\"text\":\"心愿 茅台手机！\",\"source\":\"visual\"}],\"rule_basis\":[\"任务书 9(2) 诱导消费常见话术；《广告法》第二十条\"],\"explanation\":\"存在限时低价诱导和站外导流风险。\"}"
+}

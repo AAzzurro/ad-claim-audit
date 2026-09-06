@@ -1,0 +1,152 @@
+{
+  "sample_id": "224",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "箱这个应该就是天花板了，这个材质啊给大家做的是PC的，不是身边成AB…",
+    "行李箱天花板，价格质量各方面都很到位",
+    "行李箱天花板",
+    "比常规的行李箱来轻20%-30%",
+    "抗压能力超级强"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        6
+      ],
+      "engine": "rules"
+    },
+    {
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        57,
+        65
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        87
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+    "《广告法》第九条；任务书示例「天花板」、「超级轻」、「超级强」"
+  ],
+  "explanation": "规则命中：存在夸大功效 模型命中：存在夸大功效 口播中多次使用绝对化词汇，并断言产品功效。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "箱这个应该就是天花板了，这个材质啊给大家做的是PC的，不是身边成AB…",
+      "matched": "天花板",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        7,
+        10
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行李箱天花板，价格质量各方面都很到位",
+      "matched": "天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        3,
+        6
+      ],
+      "rule_basis": "标注细则「功效夸大-绝对化描述」（例「最顶尖设计」）；任务书背景示例「行业天花板」",
+      "hedged": false,
+      "engine": "rules"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "行李箱天花板",
+      "matched": "行李箱天花板",
+      "source": "visual",
+      "time": 0.0,
+      "span": [
+        0,
+        6
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」、「超级轻」、「超级强」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "比常规的行李箱来轻20%-30%",
+      "matched": "比常规的行李箱来轻20%-30%",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        57,
+        65
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」、「超级轻」、「超级强」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "抗压能力超级强",
+      "matched": "抗压能力超级强",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        80,
+        87
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「天花板」、「超级轻」、「超级强」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 5,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

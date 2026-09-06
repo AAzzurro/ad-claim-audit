@@ -1,0 +1,79 @@
+{
+  "sample_id": "222",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "最新款最高端款",
+    "出口到日韩的叫猫爪款的牛珠也免费给大家送着"
+  ],
+  "evidence_position": [
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        24,
+        31
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        150,
+        171
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "《广告法》第九条；任务书示例「最新款最高端款」「出口到日韩」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 最新款最高端款为绝对化描述，出口到日韩为特定市场描述。已去掉缺少合格证据的标签。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "最新款最高端款",
+      "matched": "最新款最高端款",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        24,
+        31
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「最新款最高端款」「出口到日韩」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "出口到日韩的叫猫爪款的牛珠也免费给大家送着",
+      "matched": "出口到日韩的叫猫爪款的牛珠也免费给大家送着",
+      "source": "audio",
+      "time": 0.0,
+      "span": [
+        150,
+        171
+      ],
+      "rule_basis": "《广告法》第九条；任务书示例「最新款最高端款」「出口到日韩」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 2,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "sample_id": "229",
+  "experiment": "e3",
+  "risk_labels": [
+    "存在夸大功效"
+  ],
+  "evidence": [
+    "全球首创的三文鱼骨液体钙",
+    "能够达到500毫克",
+    "能够达到130克的"
+  ],
+  "evidence_position": [
+    {
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        12
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 42.0,
+      "span": [
+        0,
+        9
+      ],
+      "engine": "model"
+    },
+    {
+      "source": "visual",
+      "time": 42.0,
+      "span": [
+        0,
+        4
+      ],
+      "engine": "model"
+    }
+  ],
+  "rule_basis": [
+    "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「500毫克」「130克」"
+  ],
+  "explanation": "模型命中：存在夸大功效 模型补上「存在夸大功效」。 口播中多次提及产品的独特性和高含量，存在夸大功效的风险。",
+  "hits": [
+    {
+      "label": "存在夸大功效",
+      "evidence": "全球首创的三文鱼骨液体钙",
+      "matched": "全球首创的三文鱼骨液体钙",
+      "source": "visual",
+      "time": 27.0,
+      "span": [
+        0,
+        12
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「500毫克」「130克」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "能够达到500毫克",
+      "matched": "能够达到500毫克",
+      "source": "visual",
+      "time": 42.0,
+      "span": [
+        0,
+        9
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「500毫克」「130克」",
+      "hedged": false,
+      "engine": "model"
+    },
+    {
+      "label": "存在夸大功效",
+      "evidence": "能够达到130克的",
+      "matched": "能够达到130克的",
+      "source": "visual",
+      "time": 42.0,
+      "span": [
+        0,
+        4
+      ],
+      "rule_basis": "标注细则：绝对化描述归入夸大功效；《广告法》第十六条功效断言；任务书示例「全球首创」「500毫克」「130克」",
+      "hedged": false,
+      "engine": "model"
+    }
+  ],
+  "n_hits": 3,
+  "n_hedged": 0,
+  "engines": {
+    "rules": {
+      "risk_labels": [
+        "正常"
+      ]
+    },
+    "model": {
+      "risk_labels": [
+        "存在夸大功效"
+      ]
+    }
+  }
+}
