@@ -42,6 +42,10 @@ data/*.log
 # 本地测试集（体积大，不入库）
 *.parquet
 
+# 任务书、法规 PDF 与书面材料（本地保留，不入库）
+Knowledge/
+reports/
+
 # 模型与临时文件
 *.wav
 *.pt
