@@ -16,7 +16,7 @@ from src.media import probe_duration
 from src.merge import merge_ocr_frames
 from src.ocr import PaddleOCREngine
 from src.pipeline import process_one
-from src.rules import LABEL_NORMAL, LABEL_UNKNOWN, RISK_LABELS
+from src.rules import LABEL_NORMAL, RISK_LABELS, finalize_labels
 
 logger = logging.getLogger("analyze")
 
@@ -43,6 +43,13 @@ MODES = {
         "short": "互补融合",
         "needs_llm": True,
         "blurb": "取并集：规则稳住促销误导，模型补上夸大功效。",
+    },
+    "e4": {
+        "id": "e4",
+        "name": "分轨识别",
+        "short": "口播 / 画面",
+        "needs_llm": True,
+        "blurb": "口播与画面分开分类，再与规则取并，避免合路时漏掉较弱一侧。",
     },
 }
 
@@ -171,7 +178,7 @@ def _hit_rows(result: dict[str, Any], engine: str) -> list[dict[str, Any]]:
     for hit in result.get("hits") or []:
         if engine == "rules" and hit.get("hedged"):
             continue
-        if engine == "model" and hit.get("grounded") is False:
+        if engine != "rules" and hit.get("grounded") is False:
             continue
         label = str(hit.get("label") or "")
         if label not in RISK_LABELS:
@@ -201,7 +208,7 @@ def _hit_rows(result: dict[str, Any], engine: str) -> list[dict[str, Any]]:
         span = pos.get("span")
         rows.append(
             {
-                "label": labels[0] if labels else LABEL_UNKNOWN,
+                "label": labels[0] if labels else LABEL_NORMAL,
                 "evidence": str(text),
                 "matched": str(text),
                 "source": pos.get("source") or "unknown",
@@ -231,62 +238,100 @@ def _verdict(labels: list[str]) -> tuple[str, str]:
     risks = [x for x in labels if x in RISK_LABELS]
     if risks:
         return "risk", "涉及虚假宣传"
-    if LABEL_UNKNOWN in labels:
-        return "unknown", "证据不足，无法判断"
     return "normal", "未见虚假宣传话术"
 
 
-def _fuse(e1: dict[str, Any], e2: dict[str, Any]) -> dict[str, Any]:
-    e1_labels = list(e1.get("risk_labels") or [])
-    e2_labels = list(e2.get("risk_labels") or [])
-    e1_risks = [x for x in RISK_LABELS if x in e1_labels]
-    e2_risks = [x for x in RISK_LABELS if x in e2_labels]
-    fused = [x for x in RISK_LABELS if x in e1_risks or x in e2_risks]
-    if fused:
-        labels = fused
-    elif LABEL_NORMAL in e1_labels or LABEL_NORMAL in e2_labels:
-        labels = [LABEL_NORMAL]
-    else:
-        labels = [LABEL_UNKNOWN]
+_ENGINE_CN = {
+    "rules": "规则",
+    "model": "模型",
+    "model_audio": "口播模型",
+    "model_visual": "画面模型",
+    "model_claims": "宣称模型",
+}
 
-    hits = _dedupe_hits(_hit_rows(e1, "rules") + _hit_rows(e2, "model"))
-    if fused:
-        hits = [h for h in hits if h["label"] in fused]
-    else:
-        hits = []
+
+def _fuse_many(named: list[tuple[str, dict[str, Any]]]) -> dict[str, Any]:
+    """多路风险标签并集。无风险时输出正常，不发出无法判断。"""
+    if not named:
+        return {
+            "risk_labels": [LABEL_NORMAL],
+            "hits": [],
+            "rule_basis": [],
+            "explanation": "没有可融合的预测。",
+            "n_hits": 0,
+            "n_hedged": 0,
+        }
+
+    risks_map: dict[str, list[str]] = {}
+    for name, rec in named:
+        labs = finalize_labels(list(rec.get("risk_labels") or []))
+        risks_map[name] = [x for x in RISK_LABELS if x in labs]
+
+    fused = [x for x in RISK_LABELS if any(x in risks for risks in risks_map.values())]
+    labels = fused if fused else [LABEL_NORMAL]
+
+    hits = _dedupe_hits([h for name, rec in named for h in _hit_rows(rec, name)])
+    hits = [h for h in hits if h["label"] in fused] if fused else []
 
     bits: list[str] = []
-    if e1_risks:
-        bits.append("规则命中：" + "、".join(e1_risks))
-    if e2_risks:
-        bits.append("模型命中：" + "、".join(e2_risks))
-    only_rules = [x for x in e1_risks if x not in e2_risks]
-    only_model = [x for x in e2_risks if x not in e1_risks]
-    if only_rules or only_model:
-        extra = []
-        if only_rules:
-            extra.append("规则补上「" + "、".join(only_rules) + "」")
-        if only_model:
-            extra.append("模型补上「" + "、".join(only_model) + "」")
-        bits.append("；".join(extra) + "。")
-    e2_exp = str(e2.get("explanation") or "").strip()
-    e1_exp = str(e1.get("explanation") or "").strip()
-    if e2_exp and labels != [LABEL_NORMAL]:
-        bits.append(e2_exp)
-    elif e1_exp:
-        bits.append(e1_exp)
-    if not bits:
-        bits.append("规则与模型均未给出风险标签。")
+    for name, risks in risks_map.items():
+        if risks:
+            bits.append(f"{_ENGINE_CN.get(name, name)}命中：" + "、".join(risks))
 
-    basis = list(dict.fromkeys([*(e1.get("rule_basis") or []), *(e2.get("rule_basis") or [])]))
+    extras: list[str] = []
+    for name, risks in risks_map.items():
+        others = {x for other, rs in risks_map.items() if other != name for x in rs}
+        only = [x for x in risks if x not in others]
+        if only:
+            extras.append(f"{_ENGINE_CN.get(name, name)}补上「" + "、".join(only) + "」")
+    if extras:
+        bits.append("；".join(extras) + "。")
+
+    preferred = ""
+    if labels != [LABEL_NORMAL]:
+        for name, rec in reversed(named):
+            if name == "rules":
+                continue
+            exp = str(rec.get("explanation") or "").strip()
+            if exp:
+                preferred = exp
+                break
+    if not preferred:
+        for _, rec in named:
+            exp = str(rec.get("explanation") or "").strip()
+            if exp:
+                preferred = exp
+                break
+    if preferred:
+        bits.append(preferred)
+    if not bits:
+        bits.append("各路均未给出风险标签。")
+
+    basis: list[str] = []
+    for _, rec in named:
+        for item in rec.get("rule_basis") or []:
+            text = str(item).strip()
+            if text and text not in basis:
+                basis.append(text)
+
+    n_hedged = 0
+    for name, rec in named:
+        if name == "rules":
+            n_hedged = int(rec.get("n_hedged") or 0)
+            break
+
     return {
         "risk_labels": labels,
         "hits": hits,
         "rule_basis": basis,
         "explanation": " ".join(bits),
         "n_hits": len(hits),
-        "n_hedged": int(e1.get("n_hedged") or 0),
+        "n_hedged": n_hedged,
     }
+
+
+def _fuse(e1: dict[str, Any], e2: dict[str, Any]) -> dict[str, Any]:
+    return _fuse_many([("rules", e1), ("model", e2)])
 
 
 def _pack(
@@ -300,7 +345,7 @@ def _pack(
     ocr: dict[str, Any],
     engines: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    labels = list(result.get("risk_labels") or [])
+    labels = finalize_labels(list(result.get("risk_labels") or []))
     verdict, verdict_text = _verdict(labels)
     hits = result.get("hits")
     if not isinstance(hits, list) or (hits and "engine" not in hits[0]):
@@ -410,6 +455,42 @@ def analyze_video(
     _emit(on_progress, "detect", "规则词表审核中…")
     e1 = detect_record(sample_id, asr, ocr)
     save_json(settings.detect_dir / f"{sample_id}.json", e1)
+
+    if mode == "e4":
+        _emit(on_progress, "classify", "口播分轨识别中…")
+        e_audio = classify_record(
+            sample_id, asr, {"merged": [], "frames": []}, model=llm_model, host=llm_host
+        )
+        audio_dir = settings.data_dir / "classify_audio"
+        audio_dir.mkdir(parents=True, exist_ok=True)
+        save_json(audio_dir / f"{sample_id}.json", e_audio)
+        _emit(on_progress, "classify", "画面分轨识别中…")
+        e_visual = classify_record(
+            sample_id, {"text": "", "segments": []}, ocr, model=llm_model, host=llm_host
+        )
+        visual_dir = settings.data_dir / "classify_visual"
+        visual_dir.mkdir(parents=True, exist_ok=True)
+        save_json(visual_dir / f"{sample_id}.json", e_visual)
+        engines = {
+            "rules": {"risk_labels": e1["risk_labels"], "n_hits": e1.get("n_hits", 0)},
+            "model_audio": {"risk_labels": e_audio["risk_labels"], "n_hits": e_audio.get("n_hits", 0)},
+            "model_visual": {"risk_labels": e_visual["risk_labels"], "n_hits": e_visual.get("n_hits", 0)},
+        }
+        fused = _fuse_many(
+            [("rules", e1), ("model_audio", e_audio), ("model_visual", e_visual)]
+        )
+        _emit(on_progress, "fuse", "融合规则与分轨结果…")
+        return _pack(
+            sample_id=sample_id,
+            video_name=video_path.name,
+            duration=duration,
+            mode=mode,
+            result=fused,
+            asr=asr,
+            ocr=ocr,
+            engines=engines,
+        )
+
     _emit(on_progress, "classify", "模型少样本分类中…")
     e2 = classify_record(sample_id, asr, ocr, model=llm_model, host=llm_host)
     save_json(settings.classify_dir / f"{sample_id}.json", e2)

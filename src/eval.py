@@ -18,8 +18,8 @@ from src.asr import save_json
 from src.config import ROOT
 from src.rules import (
     LABEL_NORMAL,
-    LABEL_UNKNOWN,
     RISK_LABELS,
+    finalize_labels,
 )
 
 logging.basicConfig(
@@ -29,7 +29,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("eval")
 
-ALL_LABELS = (*RISK_LABELS, LABEL_NORMAL, LABEL_UNKNOWN)
+ALL_LABELS = (*RISK_LABELS, LABEL_NORMAL)
 
 
 def _parse_labels(value: Any) -> list[str]:
@@ -74,7 +74,7 @@ def load_gold(path: Path) -> dict[str, list[str]]:
         sid = str(row.get("sample_id") or "").strip()
         if not sid:
             continue
-        gold[sid] = _parse_labels(row.get("风险标签"))
+        gold[sid] = finalize_labels(_parse_labels(row.get("风险标签")))
     return gold
 
 
@@ -87,7 +87,7 @@ def load_preds(detect_dir: Path, only: set[str] | None = None) -> dict[str, dict
         sid = str(rec.get("sample_id") or path.stem)
         if only is not None and sid not in only:
             continue
-        rec["risk_labels"] = _parse_labels(rec.get("risk_labels"))
+        rec["risk_labels"] = finalize_labels(_parse_labels(rec.get("risk_labels")))
         preds[sid] = rec
     return preds
 

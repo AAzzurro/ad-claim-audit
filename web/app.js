@@ -6,9 +6,14 @@
     存在站外导流风险线索: "offsite",
     存在其他线索: "other",
     正常: "ok",
-    无法判断: "unknown",
   };
-  const ENGINE_NAME = { rules: "规则", model: "模型" };
+  const ENGINE_NAME = {
+    rules: "规则",
+    model: "模型",
+    model_audio: "口播",
+    model_visual: "画面",
+    model_claims: "宣称",
+  };
   const SOURCE_NAME = { audio: "口播", visual: "画面", unknown: "原文" };
   const STEP_MAP = {
     start: "ingest",
@@ -321,7 +326,7 @@
     if (els.next) els.next.hidden = false;
     setStep("done");
     els.verdict.className = `verdict is-${data.verdict}`;
-    els.stamp.textContent = data.verdict === "risk" ? "涉及虚假宣传" : data.verdict === "unknown" ? "无法判断" : "未见虚假宣传";
+    els.stamp.textContent = data.verdict === "risk" ? "涉及虚假宣传" : "未见虚假宣传";
     els.verdictKicker.textContent = `${data.mode_meta.name} · 样本 ${data.sample_id}`;
     els.verdictTitle.textContent = data.verdict_text;
     els.explain.textContent = data.explanation || "";

@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-# 任务书第三节：六类标签 + 「无法判断」
+# 任务书第三节：六类标签。无法判断只用于解析模型旧输出，落盘前收成正常。
 LABEL_NORMAL = "正常"
 LABEL_EFFICACY = "存在夸大功效"
 LABEL_YIELD = "存在虚假收益承诺"
@@ -23,6 +23,13 @@ LABEL_OTHER = "存在其他线索"
 LABEL_UNKNOWN = "无法判断"
 
 RISK_LABELS = (LABEL_EFFICACY, LABEL_YIELD, LABEL_INDUCE, LABEL_OFFSITE, LABEL_OTHER)
+
+
+def finalize_labels(labels: list[str] | None) -> list[str]:
+    """金标准与系统输出均不发出「无法判断」；无风险时收为正常。"""
+    seen = list(labels or [])
+    risks = [x for x in RISK_LABELS if x in seen]
+    return list(risks) if risks else [LABEL_NORMAL]
 
 # 任务书 9(3)：有条件描述不必然构成风险
 _HEDGE_RE = re.compile(r"可能|有助于|部分用户反馈|效果因人而异|仅供参考")

@@ -15,7 +15,6 @@ from src.config import ROOT
 from src.merge import merge_ocr_frames
 from src.rules import (
     LABEL_NORMAL,
-    LABEL_UNKNOWN,
     RISK_LABELS,
     hedge_nearby,
     iter_matches,
@@ -59,7 +58,7 @@ def _hits_in_text(
         hedged = hedge_nearby(text, start, end)
         hits.append(
             {
-                "label": LABEL_UNKNOWN if hedged else rule.label,
+                "label": rule.label,
                 "evidence": _snippet(text, start, end),
                 "matched": surface,
                 "evidence_position": {
@@ -119,9 +118,9 @@ def detect_record(
         shown = firm
         explanation = "规则命中可见/可听原文；未根据本条视频增补词表。"
     elif hedged_only:
-        risk_labels = [LABEL_UNKNOWN]
-        shown = hedged_only
-        explanation = "仅命中有条件描述附近的关键词，任务书 9(3) 不必然构成风险。"
+        risk_labels = [LABEL_NORMAL]
+        shown = []
+        explanation = "仅命中有条件描述附近的关键词，按任务书 9(3) 不标风险。"
     else:
         risk_labels = [LABEL_NORMAL]
         shown = []

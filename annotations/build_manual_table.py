@@ -6,7 +6,7 @@
 - 价格或促销误导（任务书标签「诱导消费」）：原价虚构、限时稀缺、全网最低价
 - 站外导流：私信/加群/扫码
 - 其他线索：细则四类未覆盖者（如迷信好运）
-- 正常/无法判断：有条件描述、普通介绍；证据不足则无法判断
+- 正常：有条件描述、普通介绍；原文不足亦标正常（金标准不设无法判断）
 
 原 videos/output.xlsx 仅供参考。判断以本条 30 秒切片中可见、可听到的内容为准。
 """
@@ -30,7 +30,6 @@ LABEL_YIELD = "存在虚假收益承诺"
 LABEL_INDUCE = "存在诱导消费"
 LABEL_OFFSITE = "存在站外导流风险线索"
 LABEL_OTHER = "存在其他线索"
-LABEL_UNKNOWN = "无法判断"
 ANNOTATOR = "人工标注（基于本切片 ASR/OCR/文案复核）"
 ANNOTATE_DATE = "2026-09-04"
 
@@ -167,10 +166,9 @@ def abs_excluded(text: str, start: int, end: int) -> bool:
 
 NORMAL_IDS = _ids(
     "1 2 3 4 5 17 33 80 81 82 87 136 138 167 187 190 195",
-    "199 200 202 204 208 214 216 219 223 232 235 236",
+    "199 200 202 204 208 210 214 216 219 223 232 235 236",
     "133 135 198",
 )
-UNKNOWN_IDS = _ids("210")
 
 # 功效断言 / 医疗用语 / 保健食品疾病暗示（本切片可见）
 EFFICACY = {
@@ -328,7 +326,7 @@ NOTES = {
     "186": "口播几乎不可用；画面评价区写「改善静脉曲张」等疾病功效，作为广告展示内容计入。",
     "203": "口播宣称产后漏尿「十人九人断根」「谁用谁去根」，非药冒充药品式功效断言。",
     "207": "「可能活到120岁」虽有「可能」，后文把玻尿酸与裸鼹鼠不得癌/长寿因子绑定，化妆品领域从严标夸大功效。",
-    "210": "口播为空，画面未见「首创」或其它虚假宣传原文，证据不足。",
+    "210": "口播为空，画面未见「首创」或其它虚假宣传原文；金标准不设无法判断，标正常。",
     "232": "「首选一定是选咖啡」是颜色推荐，不是品牌「首选」。",
     "235": "「永久做这个行业」指子承父业，不是产品永久有效。",
     "236": "原标「最佳」未出现，内容为眼袋预防科普，未见虚假宣传话术。",
@@ -352,8 +350,6 @@ def load_ocr_lines(sample_id: str) -> list[dict]:
 
 def collect_labels(sid: str) -> list[str]:
     labels: list[str] = []
-    if sid in UNKNOWN_IDS:
-        return [LABEL_UNKNOWN]
     if sid in NORMAL_IDS:
         return [LABEL_NORMAL]
     if sid in EFFICACY or sid in ABS_FORCE:
@@ -391,8 +387,6 @@ def build_note(sid: str, labels: list[str], abs_surfaces: list[str], price_surfa
         return NOTES[sid]
     if labels == [LABEL_NORMAL]:
         return "本切片未见虚假宣传话术原文。原标签若为其他违法类型，本任务不标注。"
-    if labels == [LABEL_UNKNOWN]:
-        return "本切片可核原文不足，无法判断是否构成虚假宣传话术。"
     bits = []
     if LABEL_EFFICACY in labels:
         if abs_surfaces:
@@ -427,8 +421,8 @@ def main() -> None:
         copy_text = it.get("广告描述") or ""
 
         labels = collect_labels(sid)
-        abs_hits = [] if sid in NORMAL_IDS or sid in UNKNOWN_IDS else scan_regex(_ABS_RE, asr, visual)
-        price_hits = [] if sid in NORMAL_IDS or sid in UNKNOWN_IDS else scan_regex(_PRICE_RE, asr, visual)
+        abs_hits = [] if sid in NORMAL_IDS else scan_regex(_ABS_RE, asr, visual)
+        price_hits = [] if sid in NORMAL_IDS else scan_regex(_PRICE_RE, asr, visual)
         abs_surfaces = [h[2] for h in abs_hits]
         price_surfaces = [h[2] for h in price_hits]
         if abs_hits and LABEL_EFFICACY not in labels and sid not in NORMAL_IDS:
@@ -458,13 +452,13 @@ def main() -> None:
             labels = [LABEL_NORMAL]
             missing.append(sid)
 
-        order = [LABEL_EFFICACY, LABEL_YIELD, LABEL_INDUCE, LABEL_OFFSITE, LABEL_OTHER, LABEL_NORMAL, LABEL_UNKNOWN]
+        order = [LABEL_EFFICACY, LABEL_YIELD, LABEL_INDUCE, LABEL_OFFSITE, LABEL_OTHER, LABEL_NORMAL]
         labels = [x for x in order if x in labels]
 
         evids: list[dict] = []
         seen_snip: set[str] = set()
         for lab in labels:
-            if lab in (LABEL_NORMAL, LABEL_UNKNOWN):
+            if lab in (LABEL_NORMAL,):
                 continue
             needles = extra_needles.get(lab) or []
             # 去重 needle，按条取证
@@ -520,7 +514,7 @@ def main() -> None:
             "原标签_仅供参考": "；".join(it.get("orig_types") or []),
             "原要素_仅供参考": "；".join(it.get("orig_elements") or []),
             "风险标签": "；".join(labels),
-            "是否多标签": "是" if len([x for x in labels if x not in (LABEL_NORMAL, LABEL_UNKNOWN)]) > 1 else "否",
+            "是否多标签": "是" if len([x for x in labels if x != LABEL_NORMAL]) > 1 else "否",
             "证据文本": " || ".join(ev_txt) if ev_txt else "",
             "证据时间戳或文本位置": "；".join(pos_txt) if pos_txt else "",
             "人工说明": note,
@@ -589,7 +583,6 @@ def main() -> None:
     print("fallback_normal_ids", missing)
     print("multi", int((df["是否多标签"] == "是").sum()))
     print("normal", int(df["风险标签"].eq(LABEL_NORMAL).sum()))
-    print("unknown", int(df["风险标签"].eq(LABEL_UNKNOWN).sum()))
 
 
 if __name__ == "__main__":

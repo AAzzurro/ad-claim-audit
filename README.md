@@ -1,6 +1,6 @@
 # 短视频广告虚假宣传话术检测
 
-以约 30 秒直播/短视频广告切片为输入，完成口播转写（ASR）、画面文字识别（OCR）、规则基线（E1）、少样本语言模型分类（E2）和规则+模型融合（E3），输出风险标签、原文证据、位置、法规依据和解释。Web Demo 名称为「审言」。
+以约 30 秒直播/短视频广告切片为输入，完成口播转写（ASR）、画面文字识别（OCR）、规则基线（E1）、少样本语言模型分类（E2）、规则+模型融合（E3）和口播/画面分路再并（E4），输出风险标签、原文证据、位置、法规依据和解释。Web Demo 名称为「审言」。
 
 任务书见 `Knowledge/短视频广告虚假宣传话术检测.pdf`。测试集约 237 条，整包按测试集对待，**不根据本包句子回写词表或少样本示例**。
 
@@ -31,6 +31,7 @@ python -m src.hybrid                         # E3 融合已有 E1/E2，不重跑
 python -m src.eval                           # 评 E1
 python -m src.eval --detect-dir data/classify --experiment e2
 python -m src.eval --detect-dir data/hybrid --experiment e3
+python -m src.e4a                            # E4：口播/画面分路 + 与 E1 融合 + 评测
 python -m src.app                            # Demo http://127.0.0.1:7860
 ```
 
@@ -45,12 +46,13 @@ python -m src.app                            # Demo http://127.0.0.1:7860
 | `annotations/review_20.xlsx` | ≥20 条预测人工复核表 |
 | `data/asr` `data/ocr` `data/merged` | 已抽取文本 |
 | `data/detect` `data/classify` `data/hybrid` | E1 / E2 / E3 预测 |
+| `data/classify_audio` `data/classify_visual` `data/e4a` | E4 分路与融合 |
 | `data/eval` | P/R/F1 与分歧表 |
 | `videos/` | 原视频（体积大，可不提交；可用转写文本复现） |
 | `reports/` | 实验报告、AI 协作记录、分工说明、答辩 PPT |
 
 ## 标签
 
-多标签：`存在夸大功效`、`存在虚假收益承诺`、`存在诱导消费`、`存在站外导流风险线索`、`存在其他线索`；互斥特殊值：`正常`、`无法判断`。
+多标签：`存在夸大功效`、`存在虚假收益承诺`、`存在诱导消费`、`存在站外导流风险线索`、`存在其他线索`；互斥特殊值：`正常`。金标准与系统输出均不使用「无法判断」。
 
 判断只依据本条切片中可见、可听到的内容，不推测商品真实效果。

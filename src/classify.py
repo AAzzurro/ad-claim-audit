@@ -24,6 +24,7 @@ from src.rules import (
     LABEL_UNKNOWN,
     LABEL_YIELD,
     RISK_LABELS,
+    finalize_labels,
 )
 
 logging.basicConfig(
@@ -167,11 +168,7 @@ def _normalize_labels(raw: Any) -> list[str]:
     risks = [x for x in labels if x in RISK_LABELS]
     if risks:
         return [x for x in RISK_LABELS if x in risks]
-    if LABEL_UNKNOWN in labels:
-        return [LABEL_UNKNOWN]
-    if LABEL_NORMAL in labels:
-        return [LABEL_NORMAL]
-    return [LABEL_UNKNOWN]
+    return [LABEL_NORMAL]
 
 
 def _align_labels_with_evidence(labels: list[str], hits: list[dict[str, Any]]) -> list[str]:
@@ -182,8 +179,6 @@ def _align_labels_with_evidence(labels: list[str], hits: list[dict[str, Any]]) -
         if not aligned:
             aligned = [lab for lab in RISK_LABELS if lab in ev_labels]
         return aligned or [LABEL_NORMAL]
-    if LABEL_UNKNOWN in labels:
-        return [LABEL_UNKNOWN]
     return [LABEL_NORMAL]
 
 
@@ -207,6 +202,8 @@ def ground_evidence(
     audio: str,
     visual_lines: list[dict[str, Any]],
     labels: list[str],
+    *,
+    lexical_gate: bool = True,
 ) -> tuple[list[str], list[dict[str, Any]], list[dict[str, Any]]]:
     visual_text = " ".join(str(x.get("text") or "") for x in visual_lines)
     rows: list[dict[str, Any]] = []
@@ -215,11 +212,11 @@ def ground_evidence(
     for item in items:
         if not isinstance(item, dict):
             text = str(item).strip()
-            label = labels[0] if labels else LABEL_UNKNOWN
+            label = labels[0] if labels else LABEL_NORMAL
             source_hint = ""
         else:
             text = str(item.get("text") or item.get("evidence") or "").strip()
-            label = _canon_label(item.get("label")) or (labels[0] if labels else LABEL_UNKNOWN)
+            label = _canon_label(item.get("label")) or (labels[0] if labels else LABEL_NORMAL)
             source_hint = str(item.get("source") or "").strip().lower()
         if not text:
             continue
@@ -251,7 +248,7 @@ def ground_evidence(
                 pos = {"source": "audio", "time": 0.0, "span": list(span)}
         rows.append(
             {
-                "label": label if label in RISK_LABELS else (label or LABEL_UNKNOWN),
+                "label": label if label in RISK_LABELS else LABEL_NORMAL,
                 "evidence": text,
                 "matched": text,
                 "evidence_position": pos,
@@ -262,7 +259,11 @@ def ground_evidence(
         )
     kept = []
     for row in rows:
-        if row["label"] in RISK_LABELS and not _evidence_supports(row["label"], row["evidence"]):
+        if (
+            lexical_gate
+            and row["label"] in RISK_LABELS
+            and not _evidence_supports(row["label"], row["evidence"])
+        ):
             continue
         kept.append(row)
     evidence = [r["evidence"] for r in kept]
@@ -273,10 +274,10 @@ def ground_evidence(
 def _failed_record(sample_id: str, model: str, exc: BaseException, raw: str) -> dict[str, Any]:
     return {
         "sample_id": sample_id,
-        "risk_labels": [LABEL_UNKNOWN],
+        "risk_labels": [LABEL_NORMAL],
         "evidence": [],
         "evidence_position": [],
-        "rule_basis": ["任务书 9(5) 证据不足时应输出无法判断"],
+        "rule_basis": ["未见可核原文，按正常处理"],
         "hits": [],
         "n_hits": 0,
         "n_hedged": 0,
@@ -299,10 +300,10 @@ def classify_record(
     if not audio and not any(str(x.get("text") or "").strip() for x in visual_lines):
         return {
             "sample_id": sample_id,
-            "risk_labels": [LABEL_UNKNOWN],
+            "risk_labels": [LABEL_NORMAL],
             "evidence": [],
             "evidence_position": [],
-            "rule_basis": ["任务书 9(5) 证据不足时应输出无法判断"],
+            "rule_basis": ["未见可核原文，按正常处理"],
             "hits": [],
             "n_hits": 0,
             "n_hedged": 0,
@@ -351,11 +352,18 @@ def assemble_record(
     *,
     model: str,
     raw: str,
+    lexical_gate: bool = True,
 ) -> dict[str, Any]:
     labels = _normalize_labels(parsed.get("risk_labels") or parsed.get("labels"))
     proposed = labels
-    evidence, positions, hits = ground_evidence(parsed.get("evidence"), audio, visual_lines, labels)
-    labels = _align_labels_with_evidence(labels, hits)
+    evidence, positions, hits = ground_evidence(
+        parsed.get("evidence"),
+        audio,
+        visual_lines,
+        labels,
+        lexical_gate=lexical_gate,
+    )
+    labels = finalize_labels(_align_labels_with_evidence(labels, hits))
     evidence = [h["evidence"] for h in hits]
     positions = [h["evidence_position"] for h in hits]
     basis = parsed.get("rule_basis") or []
@@ -368,8 +376,6 @@ def assemble_record(
             explanation = "模型给出的风险缺少合格原文证据，按正常处理。"
         elif explanation:
             explanation = explanation.rstrip("。") + "。已去掉缺少合格证据的标签。"
-    if labels == [LABEL_UNKNOWN] and not explanation:
-        explanation = "模型认为证据不足。"
     if labels == [LABEL_NORMAL] and not explanation:
         explanation = "未见可核的虚假宣传原文。"
     for hit in hits:
@@ -390,6 +396,18 @@ def assemble_record(
     }
 
 
+_MODALITY_OUT = {
+    "both": "classify",
+    "audio": "classify_audio",
+    "visual": "classify_visual",
+}
+_MODALITY_EXPERIMENT = {
+    "both": "e2",
+    "audio": "e2_audio",
+    "visual": "e2_visual",
+}
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="E2 少样本结构化分类（Ollama 小模型，不跑 ASR/OCR）。")
     parser.add_argument("--data-dir", type=Path, default=ROOT / "data")
@@ -402,6 +420,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="用已有 classify JSON 的 raw 字段重算，不调用模型",
     )
+    parser.add_argument(
+        "--modality",
+        choices=("both", "audio", "visual"),
+        default="both",
+        help="both=口播+画面（E2）；audio=只看口播；visual=只看画面",
+    )
+    parser.add_argument("--out-dir", type=Path, default=None, help="默认随 --modality 写入 classify / classify_audio / classify_visual")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--retries", type=int, default=1, help="JSON 解析或调用失败后的重试次数，默认 1")
     return parser.parse_args(argv)
@@ -410,7 +435,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def run(args: argparse.Namespace) -> int:
     asr_dir = args.data_dir / "asr"
     ocr_dir = args.data_dir / "ocr"
-    out_dir = args.data_dir / "classify"
+    out_dir = args.out_dir or args.data_dir / _MODALITY_OUT[args.modality]
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not args.from_raw:
@@ -450,6 +475,10 @@ def run(args: argparse.Namespace) -> int:
         ocr = _load_json(ocr_dir / f"{sample_id}.json")
         if ocr and ocr.get("frames"):
             ocr = {**ocr, "merged": merge_ocr_frames(ocr["frames"])}
+        if args.modality == "audio":
+            ocr = {"merged": [], "frames": []}
+        elif args.modality == "visual":
+            asr = {"text": "", "segments": []}
         try:
             if args.from_raw:
                 prev = _load_json(dest) or {}
@@ -479,6 +508,8 @@ def run(args: argparse.Namespace) -> int:
             result = _failed_record(sample_id, args.model, exc, "")
         if str(result.get("explanation") or "").startswith("模型调用或解析失败"):
             failures += 1
+        result["modality"] = args.modality
+        result["experiment"] = _MODALITY_EXPERIMENT[args.modality]
         save_json(dest, result)
         rows.append(
             {
@@ -489,16 +520,19 @@ def run(args: argparse.Namespace) -> int:
         )
         logger.info("%s %s hits=%s", sample_id, ",".join(result["risk_labels"]), result["n_hits"])
 
+    experiment = _MODALITY_EXPERIMENT[args.modality]
     index = {
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "experiment": "e2",
+        "experiment": experiment,
+        "modality": args.modality,
         "model": args.model,
         "n_samples": len(rows),
         "n_failed": failures,
         "prompt_note": "少样本示例来自任务书与法规，未用测试视频原文",
         "items": rows,
     }
-    save_json(args.data_dir / "classify_index.json", index)
+    index_name = "classify_index.json" if args.modality == "both" else f"classify_{args.modality}_index.json"
+    save_json(args.data_dir / index_name, index)
     logger.info("写成 %s", out_dir)
     return 1 if failures else 0
 

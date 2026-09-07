@@ -21,11 +21,26 @@ data/merged/
 data/compare/
 data/detect/
 data/classify/
+data/classify_audio/
+data/classify_visual/
+data/classify_grounded/
+data/hybrid/
+data/hybrid_relaxed/
+data/e4a/
+data/e4a_plus/
+data/claims/
+data/classify_claims/
+data/e4b/
+data/e4b_plus/
 data/eval/
 data/uploads/
 data/review_frames/
 data/*.jsonl
 data/*.json
+data/*.log
+
+# 本地测试集（体积大，不入库）
+*.parquet
 
 # 模型与临时文件
 *.wav
